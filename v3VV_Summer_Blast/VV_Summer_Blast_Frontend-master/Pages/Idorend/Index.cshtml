@@ -1,0 +1,231 @@
+﻿@page
+@model VVSummerBlastFRONTEND.Pages.Idorend.IndexModel
+@{
+    ViewData["Title"] = "Időrend";
+
+    var napNevek = new Dictionary<string, string>
+    {
+        { "2026-07-02", "Július 2. – Csütörtök" },
+        { "2026-07-03", "Július 3. – Péntek" },
+        { "2026-07-04", "Július 4. – Szombat" }
+    };
+
+    var napSzinek = new Dictionary<string, string>
+    {
+        { "2026-07-02", "#00d2ff" },
+        { "2026-07-03", "#ff007f" },
+        { "2026-07-04", "#FFD700" }
+    };
+}
+
+<script>
+    document.body.classList.add('home-body-override');
+</script>
+
+<style>
+    .idorend-page {
+        background: #050505;
+        min-height: 100vh;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .idorend-hero {
+        background: #050505;
+        padding: 60px 0 40px;
+        text-align: center;
+        border-bottom: 1px solid #111;
+    }
+
+        .idorend-hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            color: #ffffff;
+            text-shadow: 4px 4px 0px #ff007f, 8px 8px 0px #00d2ff;
+        }
+
+        .idorend-hero p {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #FFD700;
+            margin: 0;
+        }
+
+    .idorend-content {
+        padding: 40px 0 80px;
+    }
+
+    .nap-szekció {
+        margin-bottom: 60px;
+    }
+
+    .nap-header {
+        padding: 20px 30px;
+        border-radius: 14px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+        .nap-header h2 {
+            font-size: 1.1rem;
+            font-weight: 900;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin: 0;
+            color: #050505;
+        }
+
+        .nap-header .nap-szam {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: rgba(0,0,0,0.15);
+            line-height: 1;
+        }
+
+    .esemeny-lista {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .esemeny-kartya {
+        background: #0d0d0d;
+        border-radius: 12px;
+        padding: 18px 24px;
+        display: grid;
+        grid-template-columns: 90px 1fr auto;
+        align-items: center;
+        gap: 20px;
+        border: 1px solid #1a1a1a;
+        border-left: 4px solid #00d2ff;
+        transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+        .esemeny-kartya:hover {
+            transform: translateX(6px);
+            background: #151515;
+        }
+
+    .esemeny-ido .kezdes, .esemeny-ido .vege {
+        font-size: 1.4rem;
+        font-weight: 900;
+        color: white;
+        line-height: 1;
+    }
+
+    .esemeny-info h3 {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: white;
+        margin: 0 0 4px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .mufaj-badge {
+        padding: 5px 14px;
+        border-radius: 20px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        border: 1px solid #00d2ff;
+        color: #00d2ff;
+    }
+
+    .idopont-elvalaszto {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0 14px;
+    }
+
+        .idopont-elvalaszto span {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #ff007f;
+            text-transform: uppercase;
+        }
+
+        .idopont-elvalaszto::before, .idopont-elvalaszto::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #1a1a1a;
+        }
+</style>
+
+<div class="idorend-page">
+    <div class="idorend-hero">
+        <h1>Időrend</h1>
+        <p>VV Summer Blast 2026 · Sopron</p>
+    </div>
+
+    <div class="idorend-content">
+        <div class="container">
+            @if (!Model.NapiProgram.Any())
+            {
+                <div class="ures-uzenet" style="text-align: center; padding: 60px; color: #555;">
+                    <p>Hamarosan...</p>
+                </div>
+            }
+            else
+            {
+                @foreach (var nap in Model.NapiProgram.OrderBy(n => n.Key))
+                {
+                    var napNev = napNevek.ContainsKey(nap.Key) ? napNevek[nap.Key] : nap.Key;
+                    var napSzin = napSzinek.ContainsKey(nap.Key) ? napSzinek[nap.Key] : "#00d2ff";
+                    var napSorszam = nap.Key switch { "2026-07-02" => "01", "2026-07-03" => "02", _ => "03" };
+
+                    <div class="nap-szekció">
+                        <div class="nap-header" style="background: @napSzin;">
+                            <h2>@napNev</h2>
+                            <span class="nap-szam">@napSorszam</span>
+                        </div>
+
+                        <div class="esemeny-lista">
+                            @{
+                                string? elozo_idopont = null;
+                            }
+                            @foreach (var esemeny in nap.Value)
+                            {
+                                var idopontStr = esemeny.Kezdes.ToString("HH:mm");
+                                
+                                if (elozo_idopont != null && elozo_idopont != idopontStr)
+                                {
+                                    <div class="idopont-elvalaszto">
+                                        <span>@idopontStr</span>
+                                    </div>
+                                }
+                                elozo_idopont = idopontStr;
+
+                                <div class="esemeny-kartya">
+                                    <div class="esemeny-ido">
+                                        <div class="kezdes">@esemeny.Kezdes.ToString("HH:mm")</div>
+                                        <div class="elvalaszto" style="opacity: 0.3">↓</div>
+                                        <div class="vege">@esemeny.Vege.ToString("HH:mm")</div>
+                                    </div>
+                                    <div class="esemeny-info">
+                                        <h3>@esemeny.Eloado?.Nev</h3>
+                                        <div class="szinpad" style="color: #888; font-size: 0.85rem;">📍 @esemeny.Szinpad?.Nev</div>
+                                    </div>
+                                    <span class="mufaj-badge">
+                                        @esemeny.Eloado?.Mufaj
+                                    </span>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

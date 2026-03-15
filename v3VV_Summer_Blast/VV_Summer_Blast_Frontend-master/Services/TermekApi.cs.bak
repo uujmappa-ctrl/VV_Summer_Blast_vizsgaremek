@@ -1,0 +1,52 @@
+﻿using VVSummerBlastFRONTEND.Dtos;
+using System.Net.Http.Json;
+
+namespace VVSummerBlastFRONTEND.Services
+{
+    public class TermekApi
+    {
+        private readonly HttpClient _httpClient;
+        private readonly string _baseUrl;
+
+        public TermekApi(HttpClient httpClient, IConfiguration configuration)
+        {
+            _httpClient = httpClient;
+            _baseUrl = configuration.GetValue<string>("BackendSettings:BaseUrl") ?? "https://localhost:7025/";
+        }
+
+        public async Task<List<TermekDto>> GetMindenTermekAsync()
+        {
+            try
+            {
+                var url = $"{_baseUrl.TrimEnd('/')}/api/Termekek";
+                return await _httpClient.GetFromJsonAsync<List<TermekDto>>(url) ?? new List<TermekDto>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Hiba: {ex.Message}");
+                return new List<TermekDto>();
+            }
+        }
+        public async Task<List<JegyDto>> GetJegyekAsync()
+        {
+            // 1. lekérjük az összes terméket
+            var osszesTermek = await GetMindenTermekAsync();
+
+            // 2. IDEIGLENESEN: kiválasztjuk az első 10-et (mert nálad ezek vannak)
+            var jegyTermekek = osszesTermek
+                .Where(t => t.Id >= 1 && t.Id <= 10)
+                .ToList();
+
+            // 3. átalakítjuk JegyDto-vá
+            var jegyek = jegyTermekek.Select(t => new JegyDto
+            {
+                Id = t.Id,
+                Nev = t.Nev,
+                Ar = t.Ar,
+                Leiras = "VV Summer Blast jegy"
+            }).ToList();
+
+            return jegyek;
+        }
+    }
+}

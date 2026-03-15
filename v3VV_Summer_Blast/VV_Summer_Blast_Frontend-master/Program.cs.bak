@@ -1,0 +1,47 @@
+using VVSummerBlastFRONTEND.Services;
+
+namespace VVSummerBlastFRONTEND
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+            // 1. Razor Pages szolgáltatás hozzáadása
+            builder.Services.AddRazorPages();
+
+            // 2. Az API szerviz regisztrálása (Dependency Injection)
+            // Ez teszi lehetõvé, hogy a PageModel-ekben (pl. Index.cshtml.cs) használni tudd az EloadoApi-t
+            builder.Services.AddHttpClient<EloadoApi>();
+            builder.Services.AddHttpClient<VVSummerBlastFRONTEND.Services.TermekApi>();
+            builder.Services.AddHttpClient<EsemenyApi>();
+            builder.Services.AddHttpClient<SzallasApi>();
+            var app = builder.Build();
+
+            // 3. Hibakezelés és HSTS konfiguráció
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+
+            // 4. Statikus fájlok (CSS, JS, Képek a wwwroot-ból) kiszolgálása
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            // 5. Oldalak (Pages) feltérképezése
+            app.MapRazorPages();
+
+            // Opcionális: Ha azt akarod, hogy indításkor egybõl az elõadók jöjjenek be, 
+            // ne csak az üres index, akkor a böngészõben az /Eloadok-ra kell navigálnod.
+
+            app.Run();
+        }
+    }
+}

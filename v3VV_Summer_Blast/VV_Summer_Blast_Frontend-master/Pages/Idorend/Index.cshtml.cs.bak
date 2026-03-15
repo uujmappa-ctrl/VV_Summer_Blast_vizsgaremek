@@ -1,0 +1,37 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using VVSummerBlastFRONTEND.Dtos;
+using VVSummerBlastFRONTEND.Services;
+
+namespace VVSummerBlastFRONTEND.Pages.Idorend
+{
+    public class IndexModel : PageModel
+    {
+        private readonly EsemenyApi _esemenyApi;
+
+        // ÚJÍTÁS: Ez köti össze az URL paramétert a C# kóddal
+        [BindProperty(SupportsGet = true)]
+        public string? Mufaj { get; set; }
+
+        public Dictionary<string, List<EsemenyDto>> NapiProgram { get; set; } = new();
+
+        // ÚJÍTÁS: A szűrőgombokhoz használt műfajok (A cshtml-ben lévő szótárad alapján)
+        public List<string> Mufajok { get; set; } = new()
+        {
+            "pop", "rap", "rock", "indie", "alternativ", "elektronikus", "hiphop"
+        };
+
+        public IndexModel(EsemenyApi esemenyApi) => _esemenyApi = esemenyApi;
+
+        public async Task OnGetAsync()
+        {
+            // ÚJÍTÁS: Átadjuk a műfajt
+            var esemenyek = await _esemenyApi.GetEsemenyekAsync(Mufaj);
+
+            NapiProgram = esemenyek
+                .OrderBy(e => e.Kezdes)
+                .GroupBy(e => e.Kezdes.ToString("yyyy-MM-dd"))
+                .ToDictionary(g => g.Key, g => g.ToList());
+        }
+    }
+}

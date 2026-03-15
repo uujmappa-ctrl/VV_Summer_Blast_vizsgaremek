@@ -1,0 +1,46 @@
+﻿using VVSummerBlastFRONTEND.Dtos;
+
+namespace VVSummerBlastFRONTEND.Services
+{
+    public class SzallasApi
+    {
+        private readonly HttpClient _httpClient;
+        private readonly string _baseUrl;
+
+        public SzallasApi(HttpClient httpClient, IConfiguration configuration)
+        {
+            _httpClient = httpClient;
+            // Itt ugyanazt a beállítást használjuk, mint a TermekApi-nál
+            _baseUrl = configuration.GetValue<string>("BackendSettings:BaseUrl") ?? "https://localhost:7025/";
+        }
+
+        public async Task<List<HostelDto>> GetHostelekAsync()
+        {
+            try
+            {
+                // A TrimEnd('/') biztosítja, hogy ne legyen dupla perjel az URL-ben
+                var url = $"{_baseUrl.TrimEnd('/')}/api/Hostelek";
+                return await _httpClient.GetFromJsonAsync<List<HostelDto>>(url) ?? new List<HostelDto>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Hostel hiba: {ex.Message}");
+                return new List<HostelDto>();
+            }
+        }
+
+        public async Task<List<KempingDto>> GetKempingekAsync()
+        {
+            try
+            {
+                // Itt az URL vége mindenképpen /api/Kempingek legyen!
+                var url = $"{_baseUrl.TrimEnd('/')}/api/Kempingek";
+                return await _httpClient.GetFromJsonAsync<List<KempingDto>>(url) ?? new List<KempingDto>();
+            }
+            catch (Exception ex)
+            {
+                return new List<KempingDto>();
+            }
+        }
+    }
+}

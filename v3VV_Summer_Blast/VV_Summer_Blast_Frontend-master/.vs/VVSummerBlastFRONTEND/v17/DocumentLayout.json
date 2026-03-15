@@ -1,0 +1,401 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\kosar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\kosar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\kemping\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\kemping\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\jegyek\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\jegyek\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\kemping\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\kemping\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\dtos\\termekdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:dtos\\termekdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\eloadok\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\eloadok\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\eloadok\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\eloadok\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\admin\\webshop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\admin\\webshop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\admin\\jegyek.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\admin\\jegyek.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\admin\\felhasznalok.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\admin\\felhasznalok.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\termekek\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\termekek\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\eloadok\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\eloadok\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\profil.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\profil.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\pages\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|d:\\users\\hjm7947\\documents\\04_27_vv_summer_blast\\04_27_vv_summer_blast\\vv_summer_blast-master\\dtos\\eloadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:dtos\\eloadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Index.cshtml",
+              "ViewState": "AgIAAGQBAAAAAAAAAAAAAIcBAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-27T11:24:23.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Termekek\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Termekek\\Index.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Termekek\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Termekek\\Index.cshtml",
+              "ViewState": "AgIAADIBAAAAAAAAAAAqwBoBAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T10:42:15.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Jegyek.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Admin\\Jegyek.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Jegyek.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Admin\\Jegyek.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Jegyek.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAD0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T10:10:12.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Profil.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Profil.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Profil.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Profil.cshtml",
+              "RelativeToolTip": "Pages\\Profil.cshtml",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAAwGoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T10:25:00.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Felhasznalok.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Admin\\Felhasznalok.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Felhasznalok.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Admin\\Felhasznalok.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Felhasznalok.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T10:04:25.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Index.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Admin\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAKUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T09:42:24.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAAwHwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T09:41:26.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-20T09:33:33.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Login.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Login.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Login.cshtml",
+              "RelativeToolTip": "Pages\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T09:20:25.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Eloadok\\Details.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Eloadok\\Details.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Eloadok\\Details.cshtml",
+              "RelativeToolTip": "Pages\\Eloadok\\Details.cshtml",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAwwO0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T10:59:48.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Eloadok\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Eloadok\\Index.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Eloadok\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Eloadok\\Index.cshtml",
+              "ViewState": "AgIAAFEBAAAAAAAAAAAuwG0BAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T11:22:55.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Kemping\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Kemping\\Index.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Kemping\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Kemping\\Index.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGsAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-27T08:32:26.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TermekDto.cs",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Dtos\\TermekDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\TermekDto.cs",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Dtos\\TermekDto.cs",
+              "RelativeToolTip": "Dtos\\TermekDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T08:59:50.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Kemping\\Details.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Kemping\\Details.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Kemping\\Details.cshtml",
+              "RelativeToolTip": "Pages\\Kemping\\Details.cshtml",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAswG4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-27T08:35:48.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Kosar\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Kosar\\Index.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Kosar\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Kosar\\Index.cshtml",
+              "ViewState": "AgIAAF0BAAAAAAAAAAAAAI0BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T10:45:54.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Jegyek\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Jegyek\\Index.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Jegyek\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Jegyek\\Index.cshtml",
+              "ViewState": "AgIAAGcBAAAAAAAAAAAAAIsBAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-27T09:36:21.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Checkout.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Checkout.cshtml",
+              "RelativeToolTip": "Pages\\Checkout.cshtml",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAwF8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T10:15:24.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Profil.cshtml.cs",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Profil.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Profil.cshtml.cs",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Profil.cshtml.cs",
+              "RelativeToolTip": "Pages\\Profil.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T10:25:30.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAAACcBAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T09:24:53.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Webshop.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Admin\\Webshop.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Webshop.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Admin\\Webshop.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Webshop.cshtml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAKsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T10:12:21.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Dashboard.cshtml",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T10:13:29.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Eloadok\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Eloadok\\Details.cshtml.cs",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Pages\\Eloadok\\Details.cshtml.cs",
+              "RelativeToolTip": "Pages\\Eloadok\\Details.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T11:57:30.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "EloadoDto.cs",
+              "DocumentMoniker": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Dtos\\EloadoDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\EloadoDto.cs",
+              "ToolTip": "D:\\users\\hjm7947\\Documents\\04_27_VV_Summer_Blast\\04_27_VV_Summer_Blast\\VV_Summer_Blast-master\\Dtos\\EloadoDto.cs",
+              "RelativeToolTip": "Dtos\\EloadoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T11:36:24.028Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

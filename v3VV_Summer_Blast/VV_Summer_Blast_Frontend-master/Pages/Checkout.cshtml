@@ -1,0 +1,129 @@
+﻿@page
+@model VVSummerBlastFRONTEND.Pages.CheckoutModel
+@{
+    ViewData["Title"] = "Biztonságos Fizetés";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <!-- Fő kártya konténer a reszponzív térközökkel -->
+            <div class="profile-card p-4 p-md-5">
+                
+                <!-- Fejléc: Ikon és vizuális visszajelzés a biztonságról -->
+                <div class="text-center mb-4">
+                    <i class="bi bi-shield-lock text-info display-4"></i>
+                    <h2 class="fw-900 mt-3 text-uppercase">Rendelés véglegesítése</h2>
+                    <p class="text-secondary">Kérjük, ellenőrizd a kosarad tartalmát a fizetés előtt.</p>
+                </div>
+
+                <!-- Összesítő panel: Sötét háttérrel kiemelve a végösszeg -->
+                <div class="bg-dark p-4 rounded-4 mb-4 border border-secondary">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="text-secondary fw-bold text-uppercase">Fizetendő összesen:</span>
+                        <span id="finalTotal" class="fs-3 fw-900 text-info">0 Ft</span>
+                    </div>
+                    <div class="small text-secondary">
+                        <i class="bi bi-info-circle me-1"></i> A fizetés gombra kattintva a rendelésed bekerül a rendszerünkbe.
+                    </div>
+                </div>
+
+                <!-- Interaktív gombok szekciója -->
+                <div id="checkoutActions">
+                    <button onclick="orderSubmission()" id="payBtn" class="nav-btn-login w-100 py-3 fs-5 mb-3">
+                        <i class="bi bi-credit-card me-2"></i> Fizetés és Rendelés Leadása
+                    </button>
+                    <a href="/Kosar" class="btn btn-link w-100 text-secondary text-decoration-none fw-bold">Vissza a kosárhoz</a>
+                </div>
+
+                <!-- Loader: Csak a küldés alatt látható, megelőzi a dupla kattintást -->
+                <div id="loader" class="text-center py-4" style="display:none;">
+                    <div class="spinner-border text-info mb-3" role="status"></div>
+                    <h5 class="text-info fw-bold">Tranzakció feldolgozása...</h5>
+                    <p class="text-secondary">Kérjük, ne zárd be az ablakot!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const apiBaseUrl = "https://localhost:7025";
+
+        //Ellenőrzi a jogosultságot és kiszámolja a fizetendő összeget a LocalStorage-ból.
+        // Megakadályozza az üres kosárral való visszaélést.
+        
+        function checkAuthAndLoadTotal() {
+            const user = JSON.parse(localStorage.getItem('user'));
+            const kosar = JSON.parse(localStorage.getItem('vvKosar') || '[]');
+
+            // Belépés kényszerítése
+            if (!user) {
+                alert("A rendelés leadásához be kell jelentkezned!");
+                window.location.href = "/Login";
+                return;
+            }
+
+            // Üres kosár kezelése
+            if (kosar.length === 0) {
+                alert("A kosarad üres!");
+                window.location.href = "/Termekek/Index";
+                return;
+            }
+
+            // Összegzés: ár * darabszám minden tételre
+            const osszesen = kosar.reduce((sum, t) => sum + (t.ar * t.db), 0);
+            document.getElementById('finalTotal').innerText = osszesen.toLocaleString() + " Ft";
+        }
+
+        //Összeállítja a rendelési objektumot és elküldi a backend API-nak.
+         
+        async function orderSubmission() {
+            const user = JSON.parse(localStorage.getItem('user'));
+            const kosar = JSON.parse(localStorage.getItem('vvKosar') || '[]');
+
+            // UI elemek váltása a folyamat jelzésére
+            document.getElementById('checkoutActions').style.display = 'none';
+            document.getElementById('loader').style.display = 'block';
+
+            const totalAmount = kosar.reduce((sum, t) => sum + (t.ar * t.db), 0);
+
+            // A backend által várt adatstruktúra (Rendelés + Tétellista)
+            const orderPayload = {
+                felhasznaloId: user.id,
+                vegosszeg: totalAmount,
+                tetelek: kosar.map(item => ({
+                    termekId: item.id,
+                    mennyiseg: item.db,
+                    egysegar: item.ar
+                }))
+            };
+
+            try {
+                const response = await fetch(`${apiBaseUrl}/api/Rendelesek`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(orderPayload)
+                });
+
+                if (response.ok) {
+                    // Sikeres vásárlás utáni takarítás és átirányítás
+                    localStorage.removeItem('vvKosar');
+                    alert("Sikeres vásárlás! A jegyeidet megtalálod a profilodban.");
+                    window.location.href = "/Profil";
+                } else {
+                    throw new Error("Szerver hiba történt.");
+                }
+            } catch (err) {
+                // Hiba esetén visszaállítjuk a gombokat a javításhoz
+                alert("Hiba történt a rendelés során. Próbáld újra később!");
+                document.getElementById('checkoutActions').style.display = 'block';
+                document.getElementById('loader').style.display = 'none';
+            }
+        }
+
+        // Inicializálás az oldal betöltésekor
+        document.addEventListener('DOMContentLoaded', checkAuthAndLoadTotal);
+    </script>
+}

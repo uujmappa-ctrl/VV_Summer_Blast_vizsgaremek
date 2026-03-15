@@ -1,0 +1,16 @@
+﻿namespace VVSummerBlastFRONTEND.Dtos
+{
+    public class TermekDto
+    {
+        public int Id { get; set; }
+        public string Nev { get; set; } = string.Empty;
+        public string Leiras { get; set; } = string.Empty;
+        public decimal Ar { get; set; }
+        public int Keszlet { get; set; }
+        public string KepUrl { get; set; } = string.Empty;
+        public string Tipus { get; set; } = string.Empty;
+
+        // Figyelj a névre: Variansok (NEM TermekVariansok)
+        public List<TermekVariansDto> Variansok { get; set; } = new();
+    }
+}

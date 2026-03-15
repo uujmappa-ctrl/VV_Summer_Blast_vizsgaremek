@@ -1,0 +1,257 @@
+﻿@page
+@model VVSummerBlastFRONTEND.Pages.Termekek.IndexModel
+@{
+    ViewData["Title"] = "Shop";
+}
+<script>
+    document.body.classList.add('home-body-override');</script>
+<style>
+    .termekek-page { background: #050505; min-height: 100vh; color: white; font-family: 'Montserrat', sans-serif; }
+    .termekek-hero { background: #050505; padding: 60px 0 40px; text-align: center; border-bottom: 1px solid #111; }
+    .termekek-hero h1 { font-size: clamp(3rem, 8vw, 5rem); font-weight: 900; text-transform: uppercase; letter-spacing: -2px; color: #ffffff; text-shadow: 4px 4px 0px #ff007f, 8px 8px 0px #00d2ff; }
+    .termekek-hero p { font-size: 1rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #FFD700; margin: 0; }
+    .termekek-content { padding: 60px 0 80px; }
+    .kategoria-cim { font-size: 0.75rem; font-weight: 900; letter-spacing: 5px; text-transform: uppercase; color: #00d2ff; margin-bottom: 20px; margin-top: 50px; display: flex; align-items: center; gap: 16px; }
+    .kategoria-cim::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, #00d2ff, transparent); }
+    .termek-kartya { background: #0d0d0d; border: 1px solid #222; border-radius: 16px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+    .termek-kartya:hover { transform: translateY(-8px); border-color: #00d2ff; box-shadow: 0 0 30px rgba(0, 210, 255, 0.15); }
+    .termek-kep { width: 100%; height: 200px; object-fit: contain; padding: 20px; background: #111; filter: brightness(0.9); transition: filter 0.3s ease; cursor: zoom-in; }
+    .termek-body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
+    .termek-tipus { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; border: 1px solid #00d2ff; color: #00d2ff; }
+    .termek-nev { font-size: 0.95rem; font-weight: 800; color: white; text-transform: uppercase; margin-bottom: 15px; flex: 1; }
+    .termek-ar { font-size: 1.5rem; font-weight: 900; color: #00d2ff; }
+    .btn-kosar { display: block; width: 100%; padding: 12px; font-size: 0.85rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: #050505; background: #00d2ff; border: none; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; }
+    .btn-kosar:hover:not(:disabled) { background: #ff007f; color: white; transform: scale(1.02); }
+    .btn-kosar:disabled { background: #333 !important; color: #666 !important; cursor: not-allowed; border: 1px solid #444; }
+</style>
+
+<div class="termekek-page">
+    <div class="termekek-hero">
+        <h1>Fesztivál Shop</h1>
+        <p>VV Summer Blast 2026 · Sopron</p>
+    </div>
+
+    <div class="termekek-content">
+        <div class="container">
+            @if (Model.Termekek != null && Model.Termekek.Any())
+            {
+                var tipusok = new[] {
+                    new { Kod = "ruhazat", Cim = "Ruházat", Szin = "#00d2ff" },
+                    new { Kod = "kiegeszito", Cim = "Kiegészítők", Szin = "#ff007f" },
+                    new { Kod = "Jegy", Cim = "Jegyek", Szin = "#FFD700" }
+                };
+
+                @foreach (var kat in tipusok)
+                {
+                    var termekek = Model.Termekek.Where(t => t.Tipus == kat.Kod).ToList();
+                    if (termekek.Any())
+                    {
+                        <div class="kategoria-cim" style="color: @kat.Szin;">@kat.Cim</div>
+                        <div class="row g-4 mb-5 justify-content-center">
+                            @foreach (var item in termekek)
+                            {
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="termek-kartya">
+                                        <img src="~/Images/merch/@System.IO.Path.GetFileName(item.KepUrl)" class="termek-kep" onclick="kepNagyitas(this.src, '@item.Nev')">
+                                        <div class="termek-body">
+                                            <span class="termek-tipus" style="color: @kat.Szin; border-color: @kat.Szin;">@kat.Cim</span>
+                                            <div class="termek-nev">@item.Nev</div>
+
+                                            @if (kat.Kod == "ruhazat")
+                                            {
+                                                <div class="mb-3">
+                                                    <select id="select-@item.Id" class="form-select bg-dark text-white border-secondary" onchange="frissitMaxKeszlet(@item.Id)">
+                                                        @foreach (var varians in item.Variansok.OrderBy(v => v.MeretId))
+                                                        {
+                                                            <option value="@varians.Id" data-keszlet="@varians.Keszlet" data-meretnev="@varians.Meret?.Megnevezes">
+                                                                @varians.Meret?.Megnevezes (@varians.Keszlet db)
+                                                            </option>
+                                                        }
+                                                    </select>
+                                                </div>
+                                            }
+
+                                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                                <input type="number" id="qty-@item.Id" class="form-control bg-dark text-white w-25" 
+                                                       value="1" min="0" oninput="validalMennyiseg(this)">
+                                                <div class="termek-ar" style="color: @kat.Szin;">@item.Ar.ToString("N0") Ft</div>
+                                            </div>
+
+                                            <button class="btn-kosar" id="btn-@item.Id" style="background: @kat.Szin;" onclick="kosarInditas(@item.Id, '@Html.Raw(item.Nev)', '@kat.Kod')">
+                                                Kosárba
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+
+    @* Kép nagyítás Modal *@
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark">
+                <div class="modal-body p-0 text-center">
+                    <img src="" id="modalKep" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        <script>
+            const termekekLista = @Html.Raw(Json.Serialize(Model.Termekek));
+
+            function validalMennyiseg(input) {
+                const max = parseInt(input.getAttribute('max')) || 999;
+                let ertek = input.value;
+
+                if (ertek !== "" && parseInt(ertek) < 0) {
+                    input.value = 0;
+                } else if (ertek !== "" && parseInt(ertek) > max) {
+                    input.value = max;
+                    alert(`Ebből a termékből maximum ${max} db érhető el!`);
+                }
+            }
+
+            function frissitMaxKeszlet(termekId) {
+                const select = document.getElementById(`select-${termekId}`);
+                const qtyInput = document.getElementById(`qty-${termekId}`);
+                const btn = document.getElementById(`btn-${termekId}`);
+                
+                if (!select || !qtyInput || !btn) return;
+
+                const selectedOption = select.options[select.selectedIndex];
+                const keszlet = parseInt(selectedOption.getAttribute('data-keszlet'));
+
+                if (keszlet <= 0) {
+                    qtyInput.value = 0;
+                    qtyInput.setAttribute('max', 0);
+                    qtyInput.disabled = true;
+                    btn.disabled = true;
+                    btn.innerText = "Elfogyott";
+                } else {
+                    qtyInput.disabled = false;
+                    qtyInput.setAttribute('max', keszlet);
+                    btn.disabled = false;
+                    btn.innerText = "Kosárba";
+                    if (parseInt(qtyInput.value) > keszlet) {
+                        qtyInput.value = keszlet;
+                    }
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const selectek = document.querySelectorAll('select[id^="select-"]');
+                selectek.forEach(s => {
+                    const id = s.id.replace('select-', '');
+                    frissitMaxKeszlet(id);
+                });
+
+                termekekLista.forEach(t => {
+                    const tId = t.id || t.Id;
+                    if (t.tipus !== "ruhazat" && t.tipus !== "Ruházat") {
+                        const qtyInput = document.getElementById(`qty-${tId}`);
+                        const btn = document.getElementById(`btn-${tId}`);
+                        const variansok = t.variansok || t.Variansok;
+                        
+                        if (qtyInput && btn && variansok && variansok.length > 0) {
+                            const keszlet = variansok[0].keszlet || variansok[0].Keszlet;
+                            qtyInput.setAttribute('max', keszlet);
+                            if (keszlet <= 0) {
+                                qtyInput.value = 0;
+                                qtyInput.disabled = true;
+                                btn.disabled = true;
+                                btn.innerText = "Elfogyott";
+                            }
+                        }
+                    }
+                });
+            });
+
+            function kepNagyitas(url, nev) {
+                document.getElementById('modalKep').src = url;
+                new bootstrap.Modal(document.getElementById('imageModal')).show();
+            }
+
+            function kosarInditas(termekId, nev, tipus) {
+                const qtyInput = document.getElementById(`qty-${termekId}`);
+                const db = parseInt(qtyInput.value);
+
+                if (isNaN(db) || db <= 0) {
+                    alert("0 db terméket nem lehet a kosárba helyezni! Kérlek, adj meg egy érvényes mennyiséget.");
+                    qtyInput.focus();
+                    return;
+                }
+
+                let vId = 0;
+                let meretNev = "";
+
+                if (tipus === "ruhazat") {
+                    const select = document.getElementById(`select-${termekId}`);
+                    const selectedOption = select.options[select.selectedIndex];
+                    vId = parseInt(select.value);
+                    meretNev = selectedOption.getAttribute('data-meretnev');
+                } else {
+                    const termek = termekekLista.find(t => (t.id || t.Id) === termekId);
+                    if (termek && (termek.variansok || termek.Variansok)) {
+                        const v = termek.variansok || termek.Variansok;
+                        vId = v[0].id || v[0].Id;
+                        meretNev = "Alapértelmezett";
+                    }
+                }
+
+                if (vId > 0) {
+                    vegrehajtKosarba(vId, db, nev, meretNev);
+                } else {
+                    alert("Hiba a termék azonosításakor!");
+                }
+            }
+
+            function vegrehajtKosarba(variansId, mennyiseg, nev, meret) {
+                const userJson = localStorage.getItem('user');
+                if (!userJson) {
+                    alert("Kérlek, jelentkezz be a vásárláshoz!");
+                    return;
+                }
+                const user = JSON.parse(userJson);
+
+                const payload = {
+                    FelhasznaloId: parseInt(user.id),
+                    TermekVariansId: variansId,
+                    Mennyiseg: mennyiseg
+                };
+
+                fetch('https://localhost:7025/api/Kosar', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                })
+                .then(async res => {
+                    if (res.ok) {
+                        // CSAK AKKOR ÍRJUK KI A MÉRETET, HA NEM ALAPÉRTELMEZETT
+                        let uzenet = `Sikeres: ${nev}`;
+                        if (meret && meret !== "Alapértelmezett") {
+                            uzenet += ` (${meret})`;
+                        }
+                        uzenet += ` hozzáadva!`;
+                        
+                        alert(uzenet);
+
+                        if(typeof window.kosarFrissitBadge === 'function') {
+                            window.kosarFrissitBadge();
+                        }
+                    } else {
+                        const err = await res.text();
+                        alert("Hiba történt: " + err);
+                    }
+                })
+                .catch(e => console.error("Network error:", e));
+            }
+        </script>
+    }
+</div>

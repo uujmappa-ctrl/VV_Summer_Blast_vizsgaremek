@@ -1,0 +1,151 @@
+﻿@page
+@model VVSummerBlastFRONTEND.Pages.Hostel.IndexModel
+@{
+    ViewData["Title"] = "Hostel";
+}
+
+<style>
+    .hostel-hero {
+        background: #050505;
+        padding: 60px 0 40px;
+        text-align: center;
+        border-bottom: 4px solid #00d2ff;
+    }
+
+        .hostel-hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-shadow: 4px 4px 0px #00d2ff;
+        }
+
+    .grid-section {
+        background-color: #050505;
+        padding: 60px 0;
+        min-height: 80vh;
+    }
+
+    .szallas-card {
+        background: #111;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid #222;
+        transition: 0.3s;
+        height: 100%;
+        display: flex;
+        flex-direction: column; 
+    }
+
+        .szallas-card:hover {
+            transform: translateY(-10px);
+            border-color: #00d2ff;
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+        }
+
+    .card-img-wrapper {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+    }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .card-content {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ar-tag {
+        align-self: flex-start;
+        color: #00d2ff;
+        border: 1px solid #00d2ff;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .card-content h4 {
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .description-box {
+        height: 75px; /* Fix magasság a kártyák egységes grid-megjelenéséért */
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+        .description-box p {
+            color: #888;
+            font-size: 0.9rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical;
+        }
+
+    .btn-erdekel {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+        background: transparent;
+        color: #00d2ff;
+        border: 2px solid #00d2ff;
+        text-decoration: none !important;
+        font-weight: bold;
+        letter-spacing: 2px;
+        transition: 0.3s;
+        border-radius: 8px;
+        margin-top: auto; 
+    }
+
+        .btn-erdekel:hover {
+            background: #00d2ff;
+            color: #000;
+            box-shadow: 0 0 15px #00d2ff;
+        }
+</style>
+
+<div class="hostel-hero">
+    <h1>HOSTEL</h1>
+    <p style="color: #00d2ff; letter-spacing: 3px;">VV SUMMER BLAST 2026</p>
+</div>
+
+<div class="grid-section">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            @* UI renderelése a backendről érkező gyűjtemény alapján *@
+            @foreach (var item in Model.Hostelek)
+            {
+                <div class="col-md-4">
+                    <div class="szallas-card">
+                        <div class="card-img-wrapper">
+                            <img src="@item.KepUrl" alt="@item.Nev" loading="lazy">
+                        </div>
+
+                        <div class="card-content">
+                            <span class="ar-tag">@item.Ar Ft / éj</span>
+                            <h4>@item.Nev</h4>
+
+                            <div class="description-box">
+                                <p>@item.Leiras</p>
+                            </div>
+                            
+                            <a href="@item.Link" target="_blank" rel="noopener noreferrer" class="btn-erdekel">ÉRDEKEL</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,304 @@
+﻿@page
+@model VVSummerBlastFRONTEND.Pages.Eloadok.IndexModel
+@{
+    ViewData["Title"] = "Fellépők";
+}
+
+<script>
+    document.body.classList.add('home-body-override');
+</script>
+
+<style>
+    .eloadok-hero {
+        background: #050505;
+        padding: 60px 0 40px;
+        text-align: center;
+    }
+
+    .eloadok-hero h1 {
+        font-size: clamp(3rem, 8vw, 6rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        color: #ffffff;
+        text-shadow: 4px 4px 0px #ff007f, 8px 8px 0px #00d2ff;
+    }
+
+    .eloadok-hero p {
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #FFD700;
+    }
+
+    /* A fellépők rácsos elrendezése */
+    .eloadok-grid {
+        background-color: #050505;
+        padding: 40px 0 80px;
+    }
+
+    .eloado-card {
+        background: #111;
+        border-radius: 16px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #222;
+    }
+
+    .eloado-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 30px rgba(0, 210, 255, 0.3);
+        border-color: #00d2ff;
+    }
+
+    .eloado-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        filter: grayscale(30%);
+        transition: filter 0.3s ease;
+    }
+
+    .eloado-card:hover img {
+        filter: grayscale(0%);
+    }
+
+    .eloado-card-body {
+        padding: 20px;
+        background: #111;
+    }
+
+    .eloado-card-body h4 {
+        font-size: 1.2rem;
+        font-weight: 900;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+    }
+
+    .eloado-card-body p {
+        font-size: 0.82rem;
+        color: #888;
+        margin-bottom: 14px;
+    }
+
+    .mufaj-tag {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #00d2ff;
+        border: 1px solid #00d2ff;
+        padding: 3px 10px;
+        border-radius: 20px;
+        margin-bottom: 14px;
+    }
+
+    .btn-reszletek {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 0.85rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #050505;
+        background-color: #00d2ff;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .btn-reszletek:hover {
+        background-color: #ff007f;
+        color: white;
+        box-shadow: 0 0 20px rgba(255, 0, 127, 0.5);
+    }
+
+    /* Modal design */
+    .modal-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85); 
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .modal-backdrop.active {
+        display: flex;
+    }
+
+    .modal-panel {
+        background: #111;
+        border: 1px solid #222;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 1200px;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        animation: modalIn 0.25s ease; 
+    }
+
+    @@keyframes modalIn {
+        from { opacity: 0; transform: translateY(30px) scale(0.97); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: #1a1a1a;
+        border: 1px solid #333;
+        color: #aaa;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        font-size: 1.1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+    }
+
+    .modal-body {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 0;
+        min-height: 500px;
+    }
+
+    .modal-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .modal-info {
+        padding: 40px;
+        background: #0a0a0a;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .modal-nev {
+        font-size: 2.2rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .modal-leiras {
+        font-size: 0.9rem;
+        color: #aaa;
+        line-height: 1.8;
+    }
+</style>
+
+<div class="eloadok-hero">
+    <h1>FELLÉPŐK</h1>
+    <p>VV Summer Blast 2026 · Sopron</p>
+</div>
+
+<div class="eloadok-grid">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            @if (Model.Eloadok != null && Model.Eloadok.Any())
+            {
+                @foreach (var item in Model.Eloadok)
+                {
+                    <div class="col-md-4 col-sm-6">
+                        <div class="eloado-card">
+                            <img src="@item.KepUrl" alt="@item.Nev">
+                            <div class="eloado-card-body">
+                                <span class="mufaj-tag">@item.Mufaj</span>
+                                <h4>@item.Nev</h4>
+                                <p>@item.Leiras</p>
+                                <button class="btn-reszletek" onclick="megnyitModal(@item.Id)">Részletek →</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="ures-uzenet">
+                    <p>Hamarosan...</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="modal-backdrop" id="eloadoModal" onclick="backdropKattintas(event)">
+    <div class="modal-panel" id="modalPanel">
+        <button class="modal-close" onclick="bezarModal()">✕</button>
+        <div id="modalTartalom">
+            <div class="modal-loading">Betöltés...</div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const apiBaseUrl = '@Html.Raw(ViewData["BackendBaseUrl"] ?? "https://localhost:7025")'.replace(/\/+$/, "");
+
+        async function megnyitModal(id) {
+            const modal = document.getElementById('eloadoModal');
+            const tartalom = document.getElementById('modalTartalom');
+
+            if (!modal || !tartalom) return;
+
+            tartalom.innerHTML = '<div style="padding:80px; text-align:center; color:#555;">Betöltés...</div>';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            try {
+                const response = await fetch(`${apiBaseUrl}/api/Eloadok/${id}`);
+                const e = await response.json();
+
+                tartalom.innerHTML = `
+                    <div class="modal-body">
+                        <div class="modal-img">
+                            <img src="${e.kepUrl}" alt="${e.nev}" />
+                        </div>
+                        <div class="modal-info">
+                            <h2 class="modal-nev">${e.nev}</h2>
+                            <span class="mufaj-tag" style="width:fit-content">${e.mufaj}</span>
+                            <p class="modal-leiras">${e.bio || e.leiras || "Nincs leírás."}</p>
+                            <div class="modal-button-container">
+                                <a href="/Jegyek" style="display:inline-block; padding:12px 24px; background:#ff007f; color:white; border-radius:8px; text-decoration:none; font-weight:900;">Jegyvásárlás</a>
+                            </div>
+                        </div>
+                    </div>`;
+            } catch (err) {
+                tartalom.innerHTML = '<div style="padding:80px; text-align:center;">Hiba történt.</div>';
+            }
+        }
+
+        function bezarModal() {
+            document.getElementById('eloadoModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function backdropKattintas(event) {
+            if (event.target === document.getElementById('eloadoModal')) bezarModal();
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') bezarModal();
+        });
+    </script>
+}

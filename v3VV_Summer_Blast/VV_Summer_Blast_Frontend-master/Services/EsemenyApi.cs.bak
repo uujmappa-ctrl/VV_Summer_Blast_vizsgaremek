@@ -1,0 +1,45 @@
+﻿using VVSummerBlastFRONTEND.Dtos;
+using System.Net.Http.Json;
+
+namespace VVSummerBlastFRONTEND.Services
+{
+    public class EsemenyApi
+    {
+        private readonly HttpClient _httpClient;
+        private readonly string _baseUrl;
+
+        public EsemenyApi(HttpClient httpClient, IConfiguration configuration)
+        {
+            _httpClient = httpClient;
+            _baseUrl = configuration.GetValue<string>("BackendSettings:BaseUrl") ?? "https://localhost:7025/";
+        }
+
+        // ÚJÍTÁS: string? mufaj = null
+        public async Task<List<EsemenyDto>> GetEsemenyekAsync(string? mufaj = null)
+        {
+            try
+            {
+                var url = $"{_baseUrl.TrimEnd('/')}/api/Esemenyek";
+
+                // ÚJÍTÁS: URL paraméter hozzáfűzése
+                if (!string.IsNullOrWhiteSpace(mufaj))
+                {
+                    url += $"?mufaj={Uri.EscapeDataString(mufaj)}";
+                }
+
+                var response = await _httpClient.GetStringAsync(url);
+                var options = new System.Text.Json.JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                };
+                return System.Text.Json.JsonSerializer.Deserialize<List<EsemenyDto>>(response, options)
+                       ?? new List<EsemenyDto>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Hiba: {ex.Message}");
+                return new List<EsemenyDto>();
+            }
+        }
+    }
+}

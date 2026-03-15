@@ -1,0 +1,26 @@
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using VVSummerBlastFRONTEND.Dtos;
+using VVSummerBlastFRONTEND.Services;
+
+namespace VVSummerBlastFRONTEND.Pages.Hostel
+{
+    public class IndexModel : PageModel
+    {
+        private readonly SzallasApi _szallasApi;
+        public List<HostelDto> Hostelek { get; set; } = new();
+
+        public IndexModel(SzallasApi szallasApi) => _szallasApi = szallasApi;
+
+        public async Task OnGetAsync()
+        {
+            try
+            {
+                Hostelek = await _szallasApi.GetHostelekAsync();
+            }
+            catch
+            {
+                Hostelek = new List<HostelDto>();
+            }
+        }
+    }
+}

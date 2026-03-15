@@ -1,0 +1,61 @@
+﻿using VVSummerBlastFRONTEND.Dtos;
+using System.Net.Http.Json;
+
+namespace VVSummerBlastFRONTEND.Services
+{
+    public class EloadoApi
+    {
+        private readonly HttpClient _httpClient;
+        private readonly string _baseUrl;
+
+        // Az IConfiguration injektálása biztosítja, hogy elérjük az appsettings.json-t
+        public EloadoApi(HttpClient httpClient, IConfiguration configuration)
+        {
+            _httpClient = httpClient;
+
+            // Kiolvassuk a JSON-ből a címet. Ha nem találja, alapértelmezetten a te portodat használja.
+            _baseUrl = configuration.GetValue<string>("BackendSettings:BaseUrl") ?? "https://localhost:7025/";
+        }
+
+        // ÚJÍTÁS: Hozzáadtuk a választható mufaj paramétert
+        public async Task<List<EloadoDto>> GetEloadokAsync(string? mufaj = null)
+        {
+            // Alap URL
+            var url = $"{_baseUrl.TrimEnd('/')}/api/Eloadok";
+
+            // ÚJÍTÁS: Ha kaptunk műfajt, hozzáfűzzük paraméterként az URL-hez
+            if (!string.IsNullOrWhiteSpace(mufaj))
+            {
+                // A Uri.EscapeDataString azért fontos, mert ha a műfajban szóköz vagy speciális karakter van (pl. "Hip-Hop"), azt biztonságossá teszi az URL-ben
+                url += $"?mufaj={Uri.EscapeDataString(mufaj)}";
+            }
+
+            try
+            {
+                var result = await _httpClient.GetFromJsonAsync<List<EloadoDto>>(url);
+                return result ?? new List<EloadoDto>();
+            }
+            catch (Exception ex)
+            {
+                // Hiba esetén (pl. nem fut a backend) üres listát adunk vissza, és naplózzuk
+                Console.WriteLine($"Hiba az API hívásakor: {ex.Message}");
+                return new List<EloadoDto>();
+            }
+        }
+
+        public async Task<EloadoDto?> GetEloadoByIdAsync(int id)
+        {
+            var url = $"{_baseUrl.TrimEnd('/')}/api/Eloadok/{id}";
+
+            try
+            {
+                return await _httpClient.GetFromJsonAsync<EloadoDto>(url);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Hiba az API hívásakor: {ex.Message}");
+                return null;
+            }
+        }
+    }
+}

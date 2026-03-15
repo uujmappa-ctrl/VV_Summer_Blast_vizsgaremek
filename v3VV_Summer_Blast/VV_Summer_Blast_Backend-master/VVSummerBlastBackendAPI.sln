@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11626.88 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VVSummerBlastBackendAPI", "VVSummerBlastBackendAPI.csproj", "{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VVSummerBlast.Tests", "..\VVSummerBlast.Tests\VVSummerBlast.Tests.csproj", "{95500348-E625-4796-A32C-733525A2F61E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95500348-E625-4796-A32C-733525A2F61E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95500348-E625-4796-A32C-733525A2F61E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95500348-E625-4796-A32C-733525A2F61E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95500348-E625-4796-A32C-733525A2F61E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE9311DB-6697-48FF-9ACC-645A511269B2}
+	EndGlobalSection
+EndGlobal

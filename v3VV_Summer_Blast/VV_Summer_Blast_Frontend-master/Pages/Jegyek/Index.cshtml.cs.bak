@@ -1,0 +1,21 @@
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using VVSummerBlastFRONTEND.Dtos;
+using VVSummerBlastFRONTEND.Services;
+
+namespace VVSummerBlastFRONTEND.Pages.Jegyek
+{
+    public class IndexModel : PageModel
+    {
+        private readonly TermekApi _termekApi;
+        public List<TermekDto> Jegyek { get; set; } = new();
+
+        public IndexModel(TermekApi termekApi) => _termekApi = termekApi;
+
+        public async Task OnGetAsync()
+        {
+            var minden = await _termekApi.GetMindenTermekAsync();
+            Jegyek = minden.Where(t => t.Tipus == "Jegy").ToList();
+        }
+        
+    }
+}

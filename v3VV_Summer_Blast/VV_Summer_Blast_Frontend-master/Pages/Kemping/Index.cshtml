@@ -1,0 +1,190 @@
+﻿@page
+@model VVSummerBlastFRONTEND.Pages.Kemping.IndexModel
+@{
+    ViewData["Title"] = "Kemping";
+}
+
+<style>
+    .kemping-hero {
+        background: #050505;
+        padding: 60px 0 40px;
+        text-align: center;
+    }
+
+        .kemping-hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-shadow: 4px 4px 0px #ff007f, 8px 8px 0px #FFD700;
+        }
+
+        .kemping-hero p {
+            color: #ff007f;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+    .grid-section {
+        background-color: #050505;
+        padding-bottom: 80px;
+    }
+
+    .szallas-card {
+        background: #111;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid #222;
+        transition: 0.3s;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .szallas-card:hover {
+            transform: translateY(-10px);
+            border-color: #FFD700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .szallas-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+    .card-content {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ar-tag {
+        align-self: flex-start;
+        color: #FFD700;
+        border: 1px solid #FFD700;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    .card-content h4 {
+        color: white;
+        margin-top: 15px;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    .btn-outline-warning-custom {
+        color: #FFD700;
+        border: 2px solid #FFD700;
+        background-color: transparent;
+        font-weight: 900;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        margin-top: auto; 
+    }
+
+        .btn-outline-warning-custom:hover {
+            background-color: #FFD700;
+            color: #050505;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+</style>
+
+<div class="kemping-hero">
+    <h1>KEMPING</h1>
+    <p>VV Summer Blast 2026 · Aludj a csillagok alatt</p>
+</div>
+
+<div class="grid-section">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            @* Kemping típusok listázása a Model-ből *@
+            @foreach (var item in Model.Kempingek)
+            {
+                <div class="col-md-4">
+                    <div class="szallas-card">
+                        <img src="@item.KepUrl" alt="@item.Nev" loading="lazy">
+                        <div class="card-content">
+                            <span class="ar-tag">@item.Ar.ToString("N0") Ft / 3 éj</span>
+                            <h4>@item.Nev</h4>
+                            <p style="color: #ccc; font-size: 0.9rem;">Kattints a részletekért!</p>
+                            
+                            <button type="button"
+                                    onclick="openDetailsManual('@item.Nev', '@item.Leiras', '@item.KepUrl', '@item.Ar.ToString("N0")')"
+                                    class="btn btn-outline-warning-custom w-100">
+                                RÉSZLETEK
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@* Dinamikus részletek megjelenítésére szolgáló Modál ablak *@
+<div class="modal fade" id="kempingDetailsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-white border-warning" style="border-color: #FFD700 !important; border-radius: 20px;">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title fw-900 text-uppercase" id="mNev" style="color: #FFD700;">Hely neve</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <img id="mKep" src="" class="img-fluid rounded-4 border border-secondary shadow" style="width: 100%; height: 300px; object-fit: cover;">
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div class="mb-2">
+                            <span class="small text-secondary text-uppercase fw-bold d-block">Csomag ára</span>
+                            <h2 class="fw-900" style="color: #FFD700;" id="mAr">0 Ft</h2>
+                        </div>
+                        <hr class="border-secondary">
+                        <p id="mLeiras" class="text-secondary mb-4"></p>
+                        <div class="p-3 rounded-3 border border-secondary" style="background: rgba(255,215,0,0.05);">
+                            <p class="small m-0 text-white-50">A kemping jegyet a Jegyek oldalon tudod kosárba tenni.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-outline-secondary fw-bold" data-bs-dismiss="modal">BEZÁRÁS</button>
+                <button type="button" onclick="ugrasAJegyekhez()" class="btn btn-outline-warning-custom px-4">
+                    JEGYEK KIVÁLASZTÁSA →
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        /**
+         * Kitölti és megjeleníti a részletező modál ablakot
+         */
+        function openDetailsManual(nev, leiras, kep, ar) {
+            document.getElementById('mNev').innerText = nev;
+            document.getElementById('mAr').innerText = ar + " Ft";
+            document.getElementById('mLeiras').innerText = leiras;
+            document.getElementById('mKep').src = kep;
+
+            const modal = new bootstrap.Modal(document.getElementById('kempingDetailsModal'));
+            modal.show();
+        }
+
+        /**
+         * Átirányítás a jegyek oldalra kemping szűrővel
+         */
+        function ugrasAJegyekhez() {
+            window.location.href = '/Jegyek?filter=kemping';
+        }
+    </script>
+}

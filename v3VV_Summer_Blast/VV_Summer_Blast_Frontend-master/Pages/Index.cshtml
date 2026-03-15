@@ -1,0 +1,525 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Főoldal";
+}
+
+<style>
+    .home-body-override {
+        margin: 0;
+        padding: 0;
+        background-color: #050505;
+        color: white;
+        font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    }
+
+    .hero-section {
+        position: relative;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        padding: 2rem;
+    }
+
+    .hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(5,5,5,0.4) 0%, rgba(5,5,5,0.95) 100%);
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: clamp(3rem, 8vw, 7rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        margin-bottom: 0;
+        color: #ffffff;
+        text-shadow: 4px 4px 0px #ff007f, 8px 8px 0px #00d2ff;
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #FFD700;
+        margin-top: 1rem;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    }
+
+    .btn-hero-buy {
+        display: inline-block;
+        margin-top: 3rem;
+        padding: 15px 40px;
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: #050505;
+        background-color: #00d2ff;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 50px;
+        box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+        transition: all 0.3s ease;
+    }
+
+        .btn-hero-buy:hover {
+            background-color: #ff007f;
+            color: white;
+            box-shadow: 0 0 30px rgba(255, 0, 127, 0.8);
+            transform: translateY(-5px);
+        }
+
+    .lineup-section {
+        padding: 5rem 2rem;
+        background-color: #050505;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .btn-lineup-title {
+        display: inline-block;
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 900;
+        color: #00d2ff;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        text-decoration: none;
+        border: 4px solid #00d2ff;
+        padding: 15px 50px;
+        border-radius: 20px;
+        margin-bottom: 50px;
+        box-shadow: 8px 8px 0px #ff007f;
+        transition: all 0.3s ease;
+    }
+
+        .btn-lineup-title:hover {
+            color: #050505 !important;
+            background-color: #00d2ff;
+            box-shadow: 0px 0px 0px #ff007f;
+            transform: translate(6px, 6px);
+        }
+
+    .lineup-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px 30px;
+    }
+
+    .artist {
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 1;
+        transition: 0.3s ease;
+        cursor: default;
+    }
+
+        .artist:hover {
+            color: #ff007f !important;
+            transform: scale(1.1);
+        }
+
+    .tier-1 {
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        color: #ffffff;
+        width: 100%;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 0px #00d2ff;
+    }
+
+    .tier-2 {
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        color: #e0e0e0;
+        margin-bottom: 0.5rem;
+    }
+
+    .tier-3 {
+        font-size: clamp(1.2rem, 2.5vw, 2rem);
+        color: #FFD700;
+    }
+
+    .tier-4 {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        color: #a0a0a0;
+        font-weight: 700;
+    }
+
+    .mission-section {
+        padding: 8rem 2rem;
+        background: radial-gradient(circle at center, rgba(255, 0, 127, 0.1) 0%, #050505 70%);
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .mission-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .mission-tag {
+        color: #ff007f;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    .mission-title {
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: 900;
+        line-height: 1.1;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+        background: linear-gradient(135deg, #fff 30%, #555 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .mission-text {
+        font-size: clamp(1rem, 1.8vw, 1.4rem);
+        line-height: 1.8;
+        color: #ccc;
+        font-weight: 500;
+        max-width: 800px;
+        margin: 0 auto 4rem auto;
+    }
+
+    .founders-grid {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .founder-name {
+        font-size: 1.3rem;
+        font-weight: 900;
+        color: #00d2ff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+        .founder-name::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 3px;
+            background: #ff007f;
+        }
+
+    .vasvilla-badge {
+        display: inline-block;
+        background: rgba(0, 210, 255, 0.1);
+        border: 1px solid #00d2ff;
+        color: #00d2ff;
+        padding: 5px 15px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-top: 15px;
+        letter-spacing: 1px;
+    }
+
+    /* Experience: Grid alapú elrendezés képi tartalommal és hover effektekkel */
+    .experience-section {
+        padding: 8rem 2rem;
+        background: linear-gradient(to bottom, #050505 0%, #0a0a0a 100%);
+        position: relative;
+        z-index: 2;
+    }
+
+    .exp-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .exp-card {
+        position: relative;
+        height: 450px;
+        border-radius: 25px;
+        overflow: hidden;
+        border: 1px solid #1a1a1a;
+        transition: all 0.4s ease;
+    }
+
+        .exp-card:hover {
+            transform: translateY(-10px);
+            border-color: #ff007f;
+            box-shadow: 0 15px 40px rgba(255, 0, 127, 0.2);
+        }
+
+    .exp-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.4;
+        transition: opacity 0.3s;
+    }
+
+    .exp-card:hover .exp-img {
+        opacity: 0.7;
+    }
+
+    .exp-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2.5rem;
+        background: linear-gradient(to top, rgba(5,5,5,1) 20%, transparent 100%);
+    }
+
+    .exp-card h3 {
+        font-size: 2rem;
+        font-weight: 900;
+        color: #00d2ff;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+    }
+
+    .exp-card p {
+        color: #eee;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    .exp-icon {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 2.5rem;
+        color: #FFD700;
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+    }
+
+    /* Statisztikai sáv: Gyors áttekintés a fesztivál adatairól */
+    .stat-bar {
+        background: #0d0d0d;
+        border: 2px solid #1a1a1a;
+        padding: 4rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
+        margin-top: 6rem;
+        border-radius: 30px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-number {
+        display: block;
+        font-size: 4rem;
+        font-weight: 900;
+        color: #ff007f;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+        text-shadow: 3px 3px 0px #00d2ff;
+    }
+
+    .stat-text {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 800;
+        letter-spacing: 3px;
+        color: #FFD700;
+    }
+</style>
+
+<script>
+    /* CSS osztály injektálása a Layout-tól való eltérő háttérszín miatt */
+    document.body.classList.add('home-body-override');
+</script>
+
+<!-- Hero szekció: Figyelemfelkeltő videós fejléc -->
+<header class="hero-section">
+    <video autoplay loop muted playsinline class="hero-video">
+        <source src="/Images/festival-bg.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">VV SUMMER BLAST</h1>
+        <h2 class="hero-subtitle">2026. Július • Sopron</h2>
+        <a href="/Jegyek" class="btn-hero-buy">Jegyvásárlás</a>
+    </div>
+</header>
+
+<!-- Lineup: Gyors nézet a kiemelt és további fellépőkről -->
+<section class="lineup-section">
+    <a href="/Eloadok" class="btn-lineup-title">
+        LINEUP <i class="bi bi-arrow-right-circle-fill ms-2"></i>
+    </a>
+    <div class="lineup-container">
+        <!-- Tier 1: Headlinerek -->
+        <div class="artist tier-1">Majka</div>
+        <div class="artist tier-1" style="color: #FFD700; text-shadow: 2px 2px 0px #ff007f;">KeineMusik</div>
+        <div class="artist tier-1">Krúbi</div>
+        <div class="artist tier-1">Halott Pénz</div>
+
+        <!-- Tier 2: Kiemelt hazai nevek -->
+        <div class="artist tier-2">Follow The Flow</div>
+        <div class="artist tier-2">Wellhello</div>
+        <div class="artist tier-2">Bagossy Brothers Company</div>
+        <div class="artist tier-2">Tankcsapda</div>
+        <div class="artist tier-2">Beton.Hofi</div>
+
+        <!-- További fellépők listája méret szerint csökkenve -->
+        <div class="artist tier-3">Carson Coma</div>
+        <div class="artist tier-3">Quimby</div>
+        <div class="artist tier-3">Dzsúdló</div>
+        <div class="artist tier-3">Valmar</div>
+        <div class="artist tier-3">Akkezdet Phiai</div>
+        <div class="artist tier-3">ByeAlex</div>
+
+        <div class="artist tier-4">Kowalsky meg a Vega</div>
+        <div class="artist tier-4">Mollywood</div>
+        <div class="artist tier-4">Analog Balaton</div>
+        <div class="artist tier-4">Blahalouisiana</div>
+        <div class="artist tier-4">Esti Kornél</div>
+        <div class="artist tier-4">Belga</div>
+        <div class="artist tier-4">DESh</div>
+        <div class="artist tier-4">T.Danny</div>
+        <div class="artist tier-4">Bruno x Spacc</div>
+        <div class="artist tier-4">Azahriah</div>
+    </div>
+</section>
+
+<!-- Mission: A márka identitása és a projekt alapítói -->
+<section class="mission-section">
+    <div class="mission-container">
+        <span class="mission-tag">A Vasvillából a csúcsra</span>
+        <h2 class="mission-title">Sopron új zenei korszaka</h2>
+        
+        <p class="mission-text">
+            A VV Summer Blast nem csak egy fesztivál – ez egy vízió.
+            Egy álom, amit Sopron szívében hívtunk életre, hogy egyesítsük a modern ritmusokat
+            a város megismételhetetlen energiájával. Az ország legnagyobb színpadai és
+            a legforróbb ütemek találkozása.
+        </p>
+
+        <div class="founders-grid">
+            <div class="founder-card">
+                <div class="founder-name">Hajek János</div>
+                <div class="vasvilla-badge">Alapító</div>
+            </div>
+            <div class="founder-card">
+                <div class="founder-name">Funtek Barnabás</div>
+                <div class="vasvilla-badge">Technikai vezető</div>
+            </div>
+            <div class="founder-card">
+                <div class="founder-name">Hollósi Áron</div>
+                <div class="vasvilla-badge">Kreatív igazgató</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience & Stats: Vizuális ízelítő és számadatok -->
+<section class="experience-section">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-900" style="letter-spacing: 5px; color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); text-transform: uppercase;">
+            Több, mint egy fesztivál
+        </h2>
+
+        <div class="exp-grid">
+            <div class="exp-card">
+                <i class="bi bi-lightning-charge-fill exp-icon"></i>
+                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1000" class="exp-img" alt="Party">
+                <div class="exp-overlay">
+                    <h3>Végtelen Party</h3>
+                    <p>3 brutális színpad, nemzetközi sztárok és a legdurvább hazai arcok tolják reggelig.</p>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <i class="bi bi-cup-straw exp-icon"></i>
+                <img src="https://images.unsplash.com/photo-1555992336-fb0d29498b13?q=80&w=1000" class="exp-img" alt="Food">
+                <div class="exp-overlay">
+                    <h3>Gasztro Village</h3>
+                    <p>A legmenőbb street food truckok és Sopron ikonikus borászai várnak.</p>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <i class="bi bi-water exp-icon"></i>
+                <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?q=80&w=1000" class="exp-img" alt="Pool">
+                <div class="exp-overlay">
+                    <h3>Pool & Chill</h3>
+                    <p>Hűsölj napközben a Soproni Lővér Uszodában, a bérleted ide is érvényes!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Proof: Bizalomépítő statisztikai adatok -->
+        <div class="stat-bar">
+            <div class="stat-item">
+                <span class="stat-number">52K+</span>
+                <span class="stat-text">Eladott Jegy</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">25</span>
+                <span class="stat-text">Kiemelt Fellépő</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-text">Brutális Színpad</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-text">Nap őrület</span>
+            </div>
+        </div>
+    </div>
+</section>

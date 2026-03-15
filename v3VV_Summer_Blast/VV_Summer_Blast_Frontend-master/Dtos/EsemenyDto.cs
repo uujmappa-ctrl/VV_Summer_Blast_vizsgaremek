@@ -1,0 +1,22 @@
+﻿namespace VVSummerBlastFRONTEND.Dtos
+{
+    public class EsemenyDto
+    {
+        public int Id { get; set; }
+        public DateTime Kezdes { get; set; }
+        public DateTime Vege { get; set; }
+        public string Leiras { get; set; } = string.Empty;
+        // Az eseményhez tartozó fellépő és helyszín adatai beágyazva
+        public EloadoDto Eloado { get; set; } = new();
+        public SzinpadDto Szinpad { get; set; } = new();
+    }
+
+    public class SzinpadDto
+    {
+        public int Id { get; set; }
+        public string Nev { get; set; } = string.Empty;
+        public string Helyszin { get; set; } = string.Empty;
+        // A színpadhoz tartozó események listája (visszafelé hivatkozás)
+        public List<object> Esemenyek { get; set; } = new();
+    }
+}

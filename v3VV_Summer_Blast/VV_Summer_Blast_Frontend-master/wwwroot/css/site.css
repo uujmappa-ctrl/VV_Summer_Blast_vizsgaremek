@@ -1,0 +1,47 @@
+:root {
+    --vv-white: #ffffff;
+    --vv-blue: #0056b3;
+    --vv-yellow: #FFD000;
+    --vv-dark-blue: #003d80;
+}
+
+body {
+    background-color: var(--vv-white);
+    color: #333;
+    font-family: 'Montserrat', sans-serif; /* Ha be tudjátok húzni a Google Fontstól, tesó */
+}
+
+/* Navbar stílusa, tesó */
+.navbar {
+    background-color: var(--vv-blue) !important;
+    border-bottom: 5px solid var(--vv-yellow);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--vv-white) !important;
+    font-weight: bold;
+}
+
+    .nav-link:hover {
+        color: var(--vv-yellow) !important;
+    }
+
+/* Gombok, tesó */
+.btn-primary-vv {
+    background-color: var(--vv-blue);
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+    .btn-primary-vv:hover {
+        background-color: var(--vv-dark-blue);
+        transform: translateY(-2px);
+    }
+
+.btn-yellow-vv {
+    background-color: var(--vv-yellow);
+    color: #000;
+    font-weight: bold;
+    border: none;
+}

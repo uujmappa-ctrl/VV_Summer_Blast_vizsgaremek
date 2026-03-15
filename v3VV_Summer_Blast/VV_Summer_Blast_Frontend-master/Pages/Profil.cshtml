@@ -1,0 +1,99 @@
+﻿@page
+@model VVSummerBlastFRONTEND.Pages.ProfilModel
+@{
+    ViewData["Title"] = "Profilom";
+}
+
+<style>
+    .profile-card {
+        background: #111;
+        border: 1px solid #222;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 0 30px rgba(0, 210, 255, 0.05);
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .info-box {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid #222;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .status-active {
+        color: #00ff99;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="profile-card text-center">
+        <!-- Felhasználói ikon és alapinfók -->
+        <div class="mb-4">
+            <i class="bi bi-person-circle" style="font-size: 6rem; color: #00d2ff;"></i>
+        </div>
+        
+        <h2 id="pName" class="fw-900 mb-1" style="font-weight:900; color: white;">...</h2>
+        <p id="pRole" class="text-info small fw-bold text-uppercase mb-4">USER</p>
+
+        <!-- Adatokat összesítő doboz -->
+        <div class="info-box text-start">
+            <div class="mb-3">
+                <small class="text-secondary d-block text-uppercase fw-bold" style="font-size: 0.7rem;">Fiók állapota</small>
+                <span class="status-active">Aktív Fesztiválozó <i class="bi bi-check-circle-fill ms-1"></i></span>
+            </div>
+            
+            <div class="mb-0">
+                <small class="text-secondary d-block text-uppercase fw-bold" style="font-size: 0.7rem;">Tagság kezdete</small>
+                <span class="text-white">2024. Summer Season</span>
+            </div>
+        </div>
+
+        <!-- Akció gombok -->
+        <div class="d-grid gap-3">
+            <a href="/Kosar" class="btn btn-info fw-bold py-2">
+                <i class="bi bi-cart3 me-2"></i>Kosaram megtekintése
+            </a>
+            <button onclick="kilepes()" class="btn btn-outline-danger fw-bold py-2">
+                <i class="bi bi-box-arrow-right me-2"></i>Kijelentkezés
+            </button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        /**
+         * Profil adatok betöltése a bejelentkezéskor elmentett adatokból
+         */
+        function loadProfile() {
+            const userJson = localStorage.getItem('user');
+            
+            if (!userJson) {
+                window.location.href = "/Login";
+                return;
+            }
+
+            const user = JSON.parse(userJson);
+            document.getElementById('pName').innerText = user.name;
+            document.getElementById('pRole').innerText = user.role;
+        }
+
+        /**
+         * Kijelentkezés folyamata: localstorage ürítése és hazaküldés
+         */
+        function kilepes() {
+            localStorage.removeItem('user');
+            window.location.href = "/";
+        }
+
+        // Oldal betöltésekor inicializálás
+        document.addEventListener('DOMContentLoaded', loadProfile);
+    </script>
+}
