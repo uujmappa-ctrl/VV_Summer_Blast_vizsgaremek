@@ -1,0 +1,274 @@
+﻿@page
+@model VVSummerBlastFRONTEND.Pages.LoginModel
+@{
+    ViewData["Title"] = "Bejelentkezés";
+}
+
+<style>
+    .auth-container {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        background: #050505;
+    }
+
+    .auth-box {
+        background: #111;
+        border: 1px solid #222;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 450px;
+        padding: 40px;
+        box-shadow: 0 0 40px rgba(0, 210, 255, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Két kis fül a tetején (Login / Register) */
+    .auth-tabs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #222;
+        padding-bottom: 10px;
+    }
+
+    .auth-tab {
+        flex: 1;
+        text-align: center;
+        color: #888;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .auth-tab.active {
+            color: #00d2ff;
+            text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+        }
+
+    .auth-form {
+        display: none; /* Alapból rejtve, a JS kapcsolgatja */
+        flex-direction: column;
+        gap: 20px;
+        animation: fadeIn 0.3s ease;
+    }
+
+        .auth-form.active {
+            display: flex;
+        }
+
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+        .input-group label {
+            color: #aaa;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .input-group input {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+            .input-group input:focus {
+                outline: none;
+                border-color: #ff007f;
+                box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+            }
+
+    .auth-btn {
+        background: linear-gradient(90deg, #00d2ff, #ff007f);
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 8px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+
+        .auth-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
+        }
+
+    #errorMessage {
+        color: #ff007f;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: bold;
+        min-height: 20px;
+    }
+</style>
+
+<div class="auth-container">
+    <div class="auth-box">
+        <div class="auth-tabs">
+            <div class="auth-tab active" id="tabLogin" onclick="switchTab('login')">Bejelentkezés</div>
+            <div class="auth-tab" id="tabRegister" onclick="switchTab('register')">Regisztráció</div>
+        </div>
+
+        <div id="errorMessage"></div>
+
+        <form id="formLogin" class="auth-form active" onsubmit="handleLogin(event)">
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="loginEmail" required placeholder="hello@fesztival.hu" />
+            </div>
+            <div class="input-group">
+                <label>Jelszó</label>
+                <input type="password" id="loginPassword" required placeholder="••••••••" />
+            </div>
+            <button type="submit" class="auth-btn">Belépés</button>
+        </form>
+
+        <form id="formRegister" class="auth-form" onsubmit="handleRegister(event)">
+            <div class="input-group">
+                <label>Felhasználónév</label>
+                <input type="text" id="regUserName" required placeholder="FesztivalArc99" />
+            </div>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="regEmail" required placeholder="hello@fesztival.hu" />
+            </div>
+            <div class="input-group">
+                <label>Jelszó</label>
+                <input type="password" id="regPassword" required minlength="6" placeholder="Legalább 6 karakter" />
+            </div>
+            <button type="submit" class="auth-btn">Regisztrálok</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Backend API címének beállítása
+        const apiBaseUrl = '@Html.Raw(ViewData["BackendBaseUrl"] ?? "https://localhost:7025")'.replace(/\/+$/, "");
+
+        // Fülek kapcsolgatása (Login / Register)
+        function switchTab(tab) {
+            document.getElementById('errorMessage').innerText = "";
+
+            if (tab === 'login') {
+                document.getElementById('tabLogin').classList.add('active');
+                document.getElementById('tabRegister').classList.remove('active');
+                document.getElementById('formLogin').classList.add('active');
+                document.getElementById('formRegister').classList.remove('active');
+            } else {
+                document.getElementById('tabRegister').classList.add('active');
+                document.getElementById('tabLogin').classList.remove('active');
+                document.getElementById('formRegister').classList.add('active');
+                document.getElementById('formLogin').classList.remove('active');
+            }
+        }
+
+        // --- REGISZTRÁCIÓ KÜLDÉSE ---
+        async function handleRegister(e) {
+            e.preventDefault(); // Ne töltse újra az oldalt
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.innerText = "Töltés...";
+
+            const data = {
+                userName: document.getElementById('regUserName').value,
+                email: document.getElementById('regEmail').value,
+                password: document.getElementById('regPassword').value
+            };
+
+            try {
+                const response = await fetch(`${apiBaseUrl}/api/Auth/register`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert("Sikeres regisztráció! Most jelentkezz be.");
+                    switchTab('login'); // Átdobjuk a login fülre
+                    document.getElementById('loginEmail').value = data.email; // Előre kitöltjük az emailt
+                } else {
+                    errorDiv.innerText = result.message || "Hiba történt a regisztráció során.";
+                }
+            } catch (err) {
+                errorDiv.innerText = "Nem sikerült csatlakozni a szerverhez.";
+            }
+        }
+
+        // --- BEJELENTKEZÉS KÜLDÉSE ---
+        async function handleLogin(e) {
+            e.preventDefault();
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.innerText = "Töltés...";
+
+            const data = {
+                email: document.getElementById('loginEmail').value,
+                password: document.getElementById('loginPassword').value
+            };
+
+            try {
+                const response = await fetch(`${apiBaseUrl}/api/Auth/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    errorDiv.style.color = "#00d2ff";
+                    errorDiv.innerText = "Sikeres belépés!";
+
+                    // Elmentjük a böngészőbe a felhasználó adatait (hogy később tudjuk, ki van belépve)
+                    localStorage.setItem('user', JSON.stringify({
+                        id: result.userId,
+                        name: result.userName,
+                        role: result.role
+                    }));
+
+                    // Átirányítjuk a főoldalra vagy a jegyekhez
+                    setTimeout(() => {
+                        window.location.href = "/";
+                    }, 1000);
+                } else {
+                    errorDiv.style.color = "#ff007f";
+                    errorDiv.innerText = result.message || "Hibás email vagy jelszó!";
+                }
+            } catch (err) {
+                errorDiv.style.color = "#ff007f";
+                errorDiv.innerText = "Nem sikerült csatlakozni a szerverhez.";
+            }
+        }
+    </script>
+}
