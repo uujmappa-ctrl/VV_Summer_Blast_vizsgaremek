@@ -1,0 +1,539 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\controllers\\kosarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:controllers\\kosarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\controllers\\esemenyekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:controllers\\esemenyekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\controllers\\termekekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:controllers\\termekekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\controllers\\eloadokcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:controllers\\eloadokcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\models\\termek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:models\\termek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\models\\szinpad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:models\\szinpad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\models\\kosar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:models\\kosar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\models\\kemping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:models\\kemping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\models\\hostel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:models\\hostel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\models\\felhasznalo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:models\\felhasznalo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\models\\esemeny.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:models\\esemeny.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\models\\eloado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:models\\eloado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\models\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:models\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\controllers\\kempingekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:controllers\\kempingekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\controllers\\hostelekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:controllers\\hostelekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\controllers\\felhasznalokcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:controllers\\felhasznalokcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506033116_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506031206_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506030311_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\vvsummerblastbackendapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:vvsummerblastbackendapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\VVSummerBlast.Tests\\ControllerTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\suli\\projekt\\04_24_VV_Summer_Blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260424224809_AddMeretToKosar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hajek\\Documents\\04_16_VV_Summer_blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260416145310_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hajek\\Documents\\04_16_VV_Summer_blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260416144705_init3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hajek\\Documents\\04_15_VV_Summer_blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260415200844_init5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hajek\\Documents\\04_15_VV_Summer_blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260415181112_init4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hajek\\Downloads\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\VVSummerBlast.Tests\\BasketTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\vv_summer_blast_backend-master\\migrations\\20260506033915_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B783C463-D5F5-4B53-84A5-AA8706BDBCD4}|VVSummerBlastBackendAPI.csproj|solutionrelative:migrations\\20260506033915_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Termek.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Termek.cs",
+              "RelativeDocumentMoniker": "Models\\Termek.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Termek.cs",
+              "RelativeToolTip": "Models\\Termek.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T22:31:01.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "KempingekController.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\KempingekController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KempingekController.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\KempingekController.cs",
+              "RelativeToolTip": "Controllers\\KempingekController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:12:24.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbSeeder.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Data\\DbSeeder.cs",
+              "RelativeDocumentMoniker": "Data\\DbSeeder.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Data\\DbSeeder.cs",
+              "RelativeToolTip": "Data\\DbSeeder.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T22:13:12.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAwDoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T21:56:16.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EloadokController.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\EloadokController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EloadokController.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\EloadokController.cs",
+              "RelativeToolTip": "Controllers\\EloadokController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T17:21:42.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TermekekController.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\TermekekController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TermekekController.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\TermekekController.cs",
+              "RelativeToolTip": "Controllers\\TermekekController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAqwA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T21:22:47.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EsemenyekController.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\EsemenyekController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EsemenyekController.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\EsemenyekController.cs",
+              "RelativeToolTip": "Controllers\\EsemenyekController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T17:04:06.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Kemping.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Kemping.cs",
+              "RelativeDocumentMoniker": "Models\\Kemping.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Kemping.cs",
+              "RelativeToolTip": "Models\\Kemping.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:07:42.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KosarController.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\KosarController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KosarController.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\KosarController.cs",
+              "RelativeToolTip": "Controllers\\KosarController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAuwDIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T22:53:17.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Szinpad.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Szinpad.cs",
+              "RelativeDocumentMoniker": "Models\\Szinpad.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Szinpad.cs",
+              "RelativeToolTip": "Models\\Szinpad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:16:53.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Kosar.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Kosar.cs",
+              "RelativeDocumentMoniker": "Models\\Kosar.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Kosar.cs",
+              "RelativeToolTip": "Models\\Kosar.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T22:47:40.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Hostel.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Hostel.cs",
+              "RelativeDocumentMoniker": "Models\\Hostel.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Hostel.cs",
+              "RelativeToolTip": "Models\\Hostel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:07:29.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Felhasznalo.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Felhasznalo.cs",
+              "RelativeDocumentMoniker": "Models\\Felhasznalo.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Felhasznalo.cs",
+              "RelativeToolTip": "Models\\Felhasznalo.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:13:47.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Esemeny.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Esemeny.cs",
+              "RelativeDocumentMoniker": "Models\\Esemeny.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Esemeny.cs",
+              "RelativeToolTip": "Models\\Esemeny.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T14:15:36.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Eloado.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Eloado.cs",
+              "RelativeDocumentMoniker": "Models\\Eloado.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\Eloado.cs",
+              "RelativeToolTip": "Models\\Eloado.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:13:21.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthDto.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\AuthDto.cs",
+              "RelativeDocumentMoniker": "Models\\AuthDto.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Models\\AuthDto.cs",
+              "RelativeToolTip": "Models\\AuthDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:13:08.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HostelekController.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\HostelekController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HostelekController.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\HostelekController.cs",
+              "RelativeToolTip": "Controllers\\HostelekController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:12:02.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FelhasznalokController.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\FelhasznalokController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FelhasznalokController.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\FelhasznalokController.cs",
+              "RelativeToolTip": "Controllers\\FelhasznalokController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAswC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:27:33.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAkwFEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:12:04.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:08:30.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ControllerTests.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\VVSummerBlast.Tests\\ControllerTests.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\VVSummerBlast.Tests\\ControllerTests.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\VVSummerBlast.Tests\\ControllerTests.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\VVSummerBlast.Tests\\ControllerTests.cs",
+              "ViewState": "AgIAALcAAAAAAAAAAADwv8IAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T08:30:56.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20260506033116_init.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506033116_init.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506033116_init.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506033116_init.cs",
+              "RelativeToolTip": "..\\..\\..\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506033116_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T03:31:17.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20260506033915_init.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506033915_init.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260506033915_init.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506033915_init.cs",
+              "RelativeToolTip": "Migrations\\20260506033915_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T03:39:15.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20260506031206_init.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506031206_init.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506031206_init.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506031206_init.cs",
+              "RelativeToolTip": "..\\..\\..\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506031206_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T03:12:06.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20260506030311_init.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506030311_init.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506030311_init.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506030311_init.cs",
+              "RelativeToolTip": "..\\..\\..\\v6 - nem lehet rendelni, kosar mukodik, no bin, no obj\\projekt\\VV_Summer_Blast_Backend-master\\Migrations\\20260506030311_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T03:03:11.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "BasketTests.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\VVSummerBlast.Tests\\BasketTests.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\VVSummerBlast.Tests\\BasketTests.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\VVSummerBlast.Tests\\BasketTests.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\VVSummerBlast.Tests\\BasketTests.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T07:56:53.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "VVSummerBlastBackendAPI.csproj",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\VVSummerBlastBackendAPI.csproj",
+              "RelativeDocumentMoniker": "VVSummerBlastBackendAPI.csproj",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\VVSummerBlastBackendAPI.csproj",
+              "RelativeToolTip": "VVSummerBlastBackendAPI.csproj",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBYAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-04T22:51:28.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v5 - admin panel megjelenese\\projekt\\VV_Summer_Blast_Backend-master\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-21T21:29:05.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "20260424224809_AddMeretToKosar.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\04_24_VV_Summer_Blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260424224809_AddMeretToKosar.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\04_24_VV_Summer_Blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260424224809_AddMeretToKosar.cs",
+              "ToolTip": "H:\\suli\\projekt\\04_24_VV_Summer_Blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260424224809_AddMeretToKosar.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\04_24_VV_Summer_Blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260424224809_AddMeretToKosar.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T22:48:09.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "20260415181112_init4.cs",
+              "DocumentMoniker": "C:\\Users\\hajek\\Documents\\04_15_VV_Summer_blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260415181112_init4.cs",
+              "ToolTip": "C:\\Users\\hajek\\Documents\\04_15_VV_Summer_blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260415181112_init4.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:11:12.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "20260415200844_init5.cs",
+              "DocumentMoniker": "C:\\Users\\hajek\\Documents\\04_15_VV_Summer_blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260415200844_init5.cs",
+              "ToolTip": "C:\\Users\\hajek\\Documents\\04_15_VV_Summer_blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260415200844_init5.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T20:08:44.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "20260416144705_init3.cs",
+              "DocumentMoniker": "C:\\Users\\hajek\\Documents\\04_16_VV_Summer_blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260416144705_init3.cs",
+              "ToolTip": "C:\\Users\\hajek\\Documents\\04_16_VV_Summer_blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260416144705_init3.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T14:47:05.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "20260416145310_init.cs",
+              "DocumentMoniker": "C:\\Users\\hajek\\Documents\\04_16_VV_Summer_blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260416145310_init.cs",
+              "ToolTip": "C:\\Users\\hajek\\Documents\\04_16_VV_Summer_blast\\VV_Summer_Blast_Backend-master\\Migrations\\20260416145310_init.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T14:53:10.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hajek\\Downloads\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hajek\\Downloads\\Index.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-13T22:17:23.937Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

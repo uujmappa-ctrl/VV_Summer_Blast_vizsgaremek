@@ -1,0 +1,156 @@
+﻿@page
+@model VVSummerBlastFRONTEND.Pages.Termekek.IndexModel
+@{
+    ViewData["Title"] = "Shop";
+}
+
+<script>
+    document.body.classList.add('home-body-override');
+</script>
+
+<style>
+    .termekek-page { background: #050505; min-height: 100vh; color: white; font-family: 'Montserrat', sans-serif; }
+    .termekek-hero { background: #050505; padding: 60px 0 40px; text-align: center; border-bottom: 1px solid #111; }
+    .termekek-hero h1 { font-size: clamp(3rem, 8vw, 5rem); font-weight: 900; text-transform: uppercase; letter-spacing: -2px; color: #ffffff; text-shadow: 4px 4px 0px #ff007f, 8px 8px 0px #00d2ff; }
+    .termekek-hero p { font-size: 1rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #FFD700; margin: 0; }
+    .termekek-content { padding: 60px 0 80px; }
+    .kategoria-cim { font-size: 0.75rem; font-weight: 900; letter-spacing: 5px; text-transform: uppercase; color: #00d2ff; margin-bottom: 20px; margin-top: 50px; display: flex; align-items: center; gap: 16px; }
+    .kategoria-cim::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, #00d2ff, transparent); }
+    .termek-kartya { background: #0d0d0d; border: 1px solid #222; border-radius: 16px; overflow: hidden; transition: 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+    .termek-kartya:hover { transform: translateY(-8px); border-color: #00d2ff; box-shadow: 0 0 30px rgba(0, 210, 255, 0.15); }
+    .termek-kep { width: 100%; height: 220px; object-fit: contain; padding: 20px; background: #111; cursor: zoom-in; }
+    .termek-body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
+    .termek-tipus { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; border: 1px solid #00d2ff; color: #00d2ff; width: fit-content; }
+    .termek-nev { font-size: 1rem; font-weight: 800; color: white; text-transform: uppercase; margin-bottom: 15px; flex: 1; min-height: 3em; }
+    .termek-ar { font-size: 1.6rem; font-weight: 900; color: #00d2ff; }
+    .btn-kosar { display: block; width: 100%; padding: 14px; font-size: 0.85rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: #050505; background: #00d2ff; border: none; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; }
+    .btn-kosar:disabled { background: #333 !important; color: #666 !important; cursor: not-allowed; }
+    .qty-control { width: 70px; text-align: center; border-radius: 8px; font-weight: bold; }
+</style>
+
+<div class="termekek-page">
+    <div class="termekek-hero">
+        <h1>Fesztivál Shop</h1>
+        <p>VV Summer Blast 2026 · Sopron</p>
+    </div>
+
+    <div class="termekek-content">
+        <div class="container">
+            @if (Model.Termekek != null && Model.Termekek.Count > 0)
+            {
+                var kateg_lista = new[] {
+                    new { Kod = "ruhazat", Cim = "Ruházat", Szin = "#00d2ff" },
+                    new { Kod = "kiegeszito", Cim = "Kiegészítők", Szin = "#ff007f" },
+                    new { Kod = "Jegy", Cim = "Jegyek és Szállás", Szin = "#FFD700" }
+                };
+
+                @foreach (var kat in kateg_lista)
+                {
+                    var szurt_termekek = Model.Termekek.Where(t => t.Tipus == kat.Kod).ToList();
+                    if (szurt_termekek.Count > 0)
+                    {
+                        <div class="kategoria-cim" style="color: @kat.Szin;">@kat.Cim</div>
+                        <div class="row g-4 mb-5">
+                            @foreach (var item in szurt_termekek)
+                            {
+                                
+                                var keszlet = item.Keszlet; 
+
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <div class="termek-kartya">
+                                        @if(!string.IsNullOrEmpty(item.KepUrl))
+                                        {
+                                            <img src="/Images/merch/@System.IO.Path.GetFileName(item.KepUrl)" class="termek-kep" onclick="kepNagyitas(this.src, '@item.Nev')">
+                                        }
+                                        else
+                                        {
+                                            <div class="termek-kep d-flex align-items-center justify-content-center" style="background: #111; height: 220px;">
+                                                <i class="bi bi-ticket-perforated" style="font-size: 4rem; color: #333;"></i>
+                                            </div>
+                                        }
+                                        
+                                        <div class="termek-body">
+                                            <span class="termek-tipus" style="color: @kat.Szin; border-color: @kat.Szin;">@kat.Cim</span>
+                                            <div class="termek-nev">@item.Nev</div>
+
+                                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                                <div class="termek-ar" style="color: @kat.Szin;">@item.Ar.ToString("N0") Ft</div>
+                                                <input type="number" id="qty-@item.Id" class="form-control bg-dark text-white qty-control" value="1" min="1" max="@keszlet" @(keszlet <= 0 ? "disabled" : "")>
+                                            </div>
+
+                                            @if (keszlet > 0)
+                                            {
+                                                <button class="btn-kosar" style="background: @kat.Szin;" onclick="kosarbaAzonnal(@item.Id, '@Html.Raw(item.Nev)')">
+                                                    Kosárba teszem
+                                                </button>
+                                            }
+                                            else
+                                            {
+                                                <button class="btn-kosar" disabled>Elfogyott</button>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>
+
+@* Image Modal *@
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-body p-0 text-center">
+                <img src="" id="modalKep" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function kepNagyitas(url, nev) {
+            document.getElementById('modalKep').src = url;
+            var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
+            myModal.show();
+        }
+
+        async function kosarbaAzonnal(tId, nev) {
+            var qtyInput = document.getElementById('qty-' + tId);
+            var mennyiseg = parseInt(qtyInput.value) || 1;
+
+            var u = localStorage.getItem('user');
+            if (!u) {
+                alert("A vásárláshoz bejelentkezés szükséges!");
+                return;
+            }
+            var user = JSON.parse(u);
+
+            try {
+                const response = await fetch('https://localhost:7025/api/Kosar', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        FelhasznaloId: parseInt(user.id), 
+                        TermekId: parseInt(tId), // v6-ban nincs variáns, közvetlenül a TermekId-t küldjük
+                        Mennyiseg: mennyiseg 
+                    })
+                });
+
+                if (response.ok) {
+                    alert(nev + " (" + mennyiseg + " db) hozzáadva a kosárhoz!");
+                    if (window.kosarFrissitBadge) window.kosarFrissitBadge();
+                } else {
+                    const errorData = await response.json();
+                    alert("Hiba: " + (errorData.message || "Nem sikerült a kosárba tenni."));
+                }
+            } catch (err) {
+                alert("Hálózati hiba történt.");
+            }
+        }
+    </script>
+}
