@@ -1,0 +1,49 @@
+﻿@page
+@{
+    Layout = "_AdminLayout"; ViewData["Title"] = "Statisztikák";
+}
+<div class="container py-4">
+    <h1 class="fw-900 text-white mb-4">ADMIN DASHBOARD</h1>
+
+    <!-- Gyorsnézeti kártyák a főbb üzleti mutatóknak -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="p-4 rounded-4" style="background:#0d0d0d; border-left: 5px solid #00d2ff;">
+                <small class="text-secondary fw-bold text-uppercase">Összes Bevétel</small>
+                <h2 id="stat-revenue" class="text-white fw-900 m-0">0 Ft</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 rounded-4" style="background:#0d0d0d; border-left: 5px solid #ff007f;">
+                <small class="text-secondary fw-bold text-uppercase">Eladott Termékek</small>
+                <h2 id="stat-items" class="text-white fw-900 m-0">0 db</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 rounded-4" style="background:#0d0d0d; border-left: 5px solid #FFD700;">
+                <small class="text-secondary fw-bold text-uppercase">Tranzakciók</small>
+                <h2 id="stat-count" class="text-white fw-900 m-0">0 db</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const apiBaseUrl = "https://localhost:7025";
+        
+        // Globális statisztikák lekérése a backendről
+        async function loadStats() {
+            try {
+                const res = await fetch(`${apiBaseUrl}/api/Rendelesek/stats`);
+                const data = await res.json();
+                
+                // Számok formázása és beillesztése a UI-ba
+                document.getElementById('stat-revenue').innerText = data.totalRevenue.toLocaleString() + " Ft";
+                document.getElementById('stat-items').innerText = data.totalTickets + " db";
+                document.getElementById('stat-count').innerText = data.ordersCount + " db";
+            } catch (err) { console.error(err); }
+        }
+        document.addEventListener('DOMContentLoaded', loadStats);
+    </script>
+}

@@ -1,0 +1,187 @@
+﻿@page
+@model VVSummerBlastFRONTEND.Pages.Admin.IndexModel
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Fellépők Kezelése";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 style="font-weight: 900; letter-spacing: 1px;">Fellépők Kezelése</h2>
+        <p class="text-secondary">Teljes körű irányítás a fesztivál fellépői felett.</p>
+    </div>
+
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#eloadoModal" onclick="ujFormBeallit()" style="font-weight: bold; border-radius: 8px; padding: 10px 20px;">
+        <i class="bi bi-plus-lg"></i> Új Fellépő Hozzáadása
+    </button>
+</div>
+
+<div class="admin-card">
+    <table class="table table-dark table-hover align-middle mb-0">
+        <thead>
+            <tr style="color: #00d2ff;">
+                <th scope="col">ID</th>
+                <th scope="col">Kép</th>
+                <th scope="col">Név</th>
+                <th scope="col">Műfaj</th>
+                <th scope="col" class="text-end">Műveletek</th>
+            </tr>
+        </thead>
+        <tbody id="eloadoTableBody">
+            <tr>
+                <td colspan="5" class="text-center text-secondary py-4">Fellépők betöltése...</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="eloadoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="background: #111; border: 1px solid #333;">
+            <div class="modal-header" style="border-bottom: 1px solid #333;">
+                <h5 class="modal-title" id="modalCim" style="color: #00d2ff; font-weight: 900;">Új Fellépő</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="eloadoForm">
+                    <input type="hidden" id="editId"> <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label text-secondary fw-bold">Név</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" id="eloadoNev" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-secondary fw-bold">Műfaj</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" id="eloadoMufaj" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label text-secondary fw-bold">Kép URL</label>
+                            <input type="url" class="form-control bg-dark text-white border-secondary" id="eloadoKepUrl" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label text-secondary fw-bold">Spotify URL</label>
+                            <input type="url" class="form-control bg-dark text-white border-secondary" id="eloadoSpotify">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label text-secondary fw-bold">Rövid leírás</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" id="eloadoLeiras" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label text-secondary fw-bold">Hosszú Bio</label>
+                            <textarea class="form-control bg-dark text-white border-secondary" id="eloadoBio" rows="4" required></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-end">
+                        <button type="button" class="btn btn-outline-secondary me-2" data-bs-dismiss="modal">Mégse</button>
+                        <button type="submit" id="saveBtn" class="btn btn-success fw-bold">Mentés</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const apiBaseUrl = "https://localhost:7025"; // A te portod!
+
+        // 1. LISTÁZÁS
+        async function eloadokBetoltese() {
+            try {
+                const response = await fetch(`${apiBaseUrl}/api/Eloadok`);
+                const eloadok = await response.json();
+                const tbody = document.getElementById('eloadoTableBody');
+                tbody.innerHTML = '';
+
+                eloadok.forEach(e => {
+                    tbody.innerHTML += `
+                        <tr>
+                            <td class="text-secondary">#${e.id}</td>
+                            <td><img src="${e.kepUrl}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;"></td>
+                            <td class="fw-bold">${e.nev}</td>
+                            <td><span class="badge bg-secondary">${e.mufaj}</span></td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-outline-info me-2" onclick="betoltSzerkeszteshez(${e.id})">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger" onclick="eloadoTorlese(${e.id})">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>`;
+                });
+            } catch (err) { console.error(err); }
+        }
+
+        // 2. MODAL BEÁLLÍTÁSA HOZZÁADÁSHOZ
+        function ujFormBeallit() {
+            document.getElementById('eloadoForm').reset();
+            document.getElementById('editId').value = "";
+            document.getElementById('modalCim').innerText = "Új Fellépő Hozzáadása";
+            document.getElementById('saveBtn').innerText = "Hozzáadás";
+        }
+
+        // 3. SZERKESZTÉS: ADATOK BETÖLTÉSE
+        async function betoltSzerkeszteshez(id) {
+            try {
+                const response = await fetch(`${apiBaseUrl}/api/Eloadok/${id}`);
+                const e = await response.json();
+
+                document.getElementById('editId').value = e.id;
+                document.getElementById('eloadoNev').value = e.nev;
+                document.getElementById('eloadoMufaj').value = e.mufaj;
+                document.getElementById('eloadoKepUrl').value = e.kepUrl;
+                document.getElementById('eloadoSpotify').value = e.spotifyUrl || "";
+                document.getElementById('eloadoLeiras').value = e.leiras;
+                document.getElementById('eloadoBio').value = e.bio;
+
+                document.getElementById('modalCim').innerText = "Fellépő Szerkesztése";
+                document.getElementById('saveBtn').innerText = "Módosítások Mentése";
+
+                const modal = new bootstrap.Modal(document.getElementById('eloadoModal'));
+                modal.show();
+            } catch (err) { alert("Hiba az adatok betöltésekor!"); }
+        }
+
+        // 4. MENTÉS (POST vagy PUT)
+        document.getElementById('eloadoForm').onsubmit = async function(e) {
+            e.preventDefault();
+            const id = document.getElementById('editId').value;
+
+            const data = {
+                id: id ? parseInt(id) : 0,
+                nev: document.getElementById('eloadoNev').value,
+                mufaj: document.getElementById('eloadoMufaj').value,
+                kepUrl: document.getElementById('eloadoKepUrl').value,
+                spotifyUrl: document.getElementById('eloadoSpotify').value,
+                leiras: document.getElementById('eloadoLeiras').value,
+                bio: document.getElementById('eloadoBio').value
+            };
+
+            const method = id ? 'PUT' : 'POST';
+            const url = id ? `${apiBaseUrl}/api/Eloadok/${id}` : `${apiBaseUrl}/api/Eloadok`;
+
+            try {
+                const response = await fetch(url, {
+                    method: method,
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    bootstrap.Modal.getInstance(document.getElementById('eloadoModal')).hide();
+                    eloadokBetoltese();
+                } else { alert("Hiba történt a mentés során!"); }
+            } catch (err) { console.error(err); }
+        };
+
+        // 5. TÖRLÉS
+        async function eloadoTorlese(id) {
+            if(confirm("Biztosan törlöd?")) {
+                const response = await fetch(`${apiBaseUrl}/api/Eloadok/${id}`, { method: 'DELETE' });
+                if (response.ok) eloadokBetoltese();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', eloadokBetoltese);
+    </script>
+}
