@@ -1,0 +1,238 @@
+﻿@page
+@{
+    ViewData["title"] = "Kosár";
+}
+
+<script>
+    // Egyedi háttérszín kényszerítése az oldalra
+    document.body.classList.add('home-body-override');
+</script>
+
+<style>
+    .kosar-hero { background: #050505; padding: 60px 0 40px; text-align: center; border-bottom: 1px solid #111; }
+    .kosar-hero h1 { font-size: clamp(3rem, 8vw, 5rem); font-weight: 900; text-transform: uppercase; letter-spacing: -2px; color: #ffffff; text-shadow: 4px 4px 0px #ff007f, 8px 8px 0px #00d2ff; }
+    .kosar-hero p { font-size: 1rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #ffd700; }
+    .kosar-content { background: #050505; min-height: 60vh; padding: 50px 0 80px; }
+    
+    /* Üres kosár állapota */
+    .kosar-ures { text-align: center; padding: 80px 20px; color: #333; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; }
+    
+    /* Kosár sor stílusa */
+    .kosar-sor { background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 12px; padding: 16px 20px; display: flex; align-items: center; gap: 16px; transition: border-color 0.3s; }
+    .kosar-sor:hover { border-color: #00d2ff; }
+    .kosar-nev { font-size: 0.9rem; font-weight: 900; color: white; text-transform: uppercase; letter-spacing: 0.5px; flex: 1; }
+    .kosar-nev small { color: #888; margin-left: 8px; font-weight: 400; text-transform: none; }
+    .kosar-ar { font-size: 1rem; font-weight: 900; color: #00d2ff; white-space: nowrap; }
+    .db-szam { font-size: 0.95rem; font-weight: 900; color: white; min-width: 40px; text-align: center; background: #1a1a1a; padding: 4px 8px; border-radius: 6px; }
+    
+    /* Funkciógombok */
+    .torles-gomb { background: transparent; border: 1px solid #333; color: #555; width: 32px; height: 32px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+    .torles-gomb:hover { border-color: #ff007f; color: #ff007f; background: rgba(255, 0, 127, 0.05); }
+    
+    /* Összegző panel */
+    .kosar-osszeg-wrap { background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 16px; padding: 28px 32px; position: sticky; top: 20px; }
+    .kosar-vegosszeg { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; margin-top: 8px; border-top: 2px solid #222; }
+    .kosar-vegosszeg span:first-child { font-size: 0.8rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; color: #aaa; }
+    .kosar-vegosszeg span:last-child { font-size: 1.8rem; font-weight: 900; color: #00d2ff; }
+    
+    .btn-fizetes { display: block; width: 100%; padding: 14px; margin-top: 20px; font-size: 0.9rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: #050505; background: #00d2ff; border: none; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 0 20px rgba(0, 210, 255, 0.3); }
+    .btn-fizetes:hover { background: #ff007f; color: white; box-shadow: 0 0 30px rgba(255, 0, 127, 0.4); transform: translateY(-2px); }
+</style>
+
+<div class="kosar-hero">
+    <h1>Kosár</h1>
+    <p>VV Summer Blast 2026 · Sopron</p>
+</div>
+
+<div class="kosar-content">
+    <div class="container">
+        <!-- Siker üzenet rendelés után -->
+        <div id="siker-uzenet" style="display:none;" class="text-center py-5">
+            <div class="mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#00ff99" class="bi bi-check-all shadow-lg" viewBox="0 0 16 16">
+                    <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>
+                </svg>
+            </div>
+            <h2 class="fw-900 text-white text-uppercase">Köszönjük a rendelést!</h2>
+            <p class="text-secondary fs-5">A visszaigazolást e-mailben is elküldtük.</p>
+            <a href="/" class="btn btn-outline-info mt-4 px-5 py-2 fw-bold">Vissza a kezdőlapra</a>
+        </div>
+
+        <div class="row g-4 justify-content-center" id="kosar-kontener">
+            <!-- Bal oldal: Termékek listája -->
+            <div class="col-lg-8" id="kosar-lista">
+                <div class="kosar-ures" id="ures" style="display:none;">
+                    <p class="text-secondary mb-4">A kosarad jelenleg üres</p>
+                    <a href="/Jegyek" class="btn btn-outline-secondary px-4 py-2 fw-bold">→ JEGYEK BÖNGÉSZÉSE</a>
+                </div>
+            </div>
+
+            <!-- Jobb oldal: Összegzés -->
+            <div class="col-lg-4" id="osszeg-panel" style="display:none;">
+                <div class="kosar-osszeg-wrap">
+                    <h5 class="text-white fw-900 text-uppercase mb-4" style="letter-spacing: 2px;">Összegzés</h5>
+                    <div id="kosar-osszeg-sorok"></div>
+                    
+                    <div class="kosar-vegosszeg">
+                        <span>Fizetendő</span>
+                        <span id="kosar-vegosszeg-display">0 Ft</span>
+                    </div>
+                    
+                    <button onclick="checkout()" class="btn-fizetes">Rendelés véglegesítése →</button>
+                    <p class="text-center text-secondary mt-3 small">Biztonságos bankkártyás fizetés</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const apiKosarUrl = "https://localhost:7025/api/Kosar";
+        const apiRendelesUrl = "https://localhost:7025/api/Rendelesek";
+
+        function getLoggedInUser() {
+            const userJson = localStorage.getItem('user');
+            return userJson ? JSON.parse(userJson) : null;
+        }
+
+        let aktualisKosarElemek = [];
+
+        /**
+         * Kosár tartalmának betöltése és megjelenítése
+         */
+        async function renderKosar() {
+            const user = getLoggedInUser();
+            if (!user) {
+                window.location.href = "/Account/Login";
+                return;
+            }
+
+            const lista = document.getElementById('kosar-lista');
+            const ures = document.getElementById('ures');
+            const osszegPanel = document.getElementById('osszeg-panel');
+
+            try {
+                const res = await fetch(`${apiKosarUrl}/${user.id || user.Id}`);
+                const kosarElemek = await res.json();
+                aktualisKosarElemek = kosarElemek;
+
+                // Régi elemek takarítása (kivéve az 'ures' divet)
+                lista.querySelectorAll('.kosar-sor-wrap').forEach(el => el.remove());
+
+                if (!kosarElemek || kosarElemek.length === 0) {
+                    ures.style.display = 'block';
+                    osszegPanel.style.display = 'none';
+                    return;
+                }
+
+                ures.style.display = 'none';
+                osszegPanel.style.display = 'block';
+
+                let total = 0;
+                kosarElemek.forEach(item => {
+                    const varians = item.termekVarians || item.TermekVarians;
+                    const termek = varians.termek || varians.Termek;
+                    const meret = varians.meret || varians.Meret;
+                    const reszosszeg = termek.ar * item.mennyiseg;
+                    total += reszosszeg;
+
+                    const meretId = varians.meretId || varians.MeretId;
+                    const meretSzoveg = (meretId === 7) ? '' : `<small>(${meret ? (meret.megnevezes || meret.Megnevezes) : 'N/A'})</small>`;
+
+                    const div = document.createElement('div');
+                    div.className = 'kosar-sor-wrap mb-3';
+                    div.innerHTML = `
+                        <div class="kosar-sor">
+                            <span class="kosar-nev">
+                                ${termek.nev || termek.Nev} 
+                                ${meretSzoveg}
+                            </span>
+                            <span class="db-szam">${item.mennyiseg} db</span>
+                            <span class="kosar-ar">${reszosszeg.toLocaleString()} Ft</span>
+                            <button class="torles-gomb" title="Törlés" onclick="deleteFromCart(${item.id || item.Id})">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                            </button>
+                        </div>`;
+                    lista.appendChild(div);
+                });
+
+                document.getElementById('kosar-vegosszeg-display').textContent = total.toLocaleString() + " Ft";
+            } catch (err) {
+                console.error("Hiba a kosár betöltésekor:", err);
+            }
+        }
+
+        /**
+         * Elem törlése a kosárból
+         */
+        async function deleteFromCart(id) {
+            if (!confirm("Biztosan törlöd a tételt?")) return;
+            try {
+                const response = await fetch(`${apiKosarUrl}/${id}`, { method: 'DELETE' });
+                if (response.ok) {
+                    await renderKosar(); 
+                    if (typeof window.kosarFrissitBadge === 'function') window.kosarFrissitBadge();
+                } else {
+                    alert("Hiba történt a törlés során!");
+                }
+            } catch (err) {
+                console.error("Hálózati hiba:", err);
+            }
+        }
+
+        /**
+         * Rendelés véglegesítése (Checkout)
+         */
+        async function checkout() {
+            const user = getLoggedInUser();
+            if (!user || aktualisKosarElemek.length === 0) return;
+
+            if (!confirm("Leadod a rendelést?")) return;
+
+            let total = 0;
+            const tetelek = aktualisKosarElemek.map(item => {
+                const varians = item.termekVarians || item.TermekVarians;
+                const termek = varians.termek || varians.Termek;
+                total += termek.ar * item.mennyiseg;
+                
+                return {
+                    termekVariansId: item.termekVariansId || item.TermekVariansId,
+                    mennyiseg: item.mennyiseg,
+                    egysegar: termek.ar
+                };
+            });
+
+            const rendelesDto = {
+                felhasznaloId: user.id || user.Id,
+                vegosszeg: total,
+                tetelek: tetelek
+            };
+
+            try {
+                const res = await fetch(apiRendelesUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(rendelesDto)
+                });
+
+                if (res.ok) {
+                    document.getElementById('kosar-kontener').style.display = 'none';
+                    document.getElementById('siker-uzenet').style.display = 'block';
+                    
+                    if (typeof window.kosarFrissitBadge === 'function') window.kosarFrissitBadge();
+                } else {
+                    const hiba = await res.json();
+                    alert("Hiba: " + (hiba.message || "Sikertelen rendelés"));
+                }
+            } catch (err) {
+                console.error("Rendelési hiba:", err);
+                alert("Hálózati hiba történt a rendelés során!");
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', renderKosar);
+    </script>
+}

@@ -1,0 +1,13 @@
+﻿namespace VVSummerBlastFRONTEND.Dtos
+{
+    public class TermekVariansDto
+    {
+        public int Id { get; set; }
+        public int TermekId { get; set; }
+        public int MeretId { get; set; }
+        public int Keszlet { get; set; }
+
+        // Navigációs tulajdonság a méret nevéhez
+        public MeretDto? Meret { get; set; }
+    }
+}

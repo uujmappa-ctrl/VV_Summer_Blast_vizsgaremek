@@ -1,0 +1,204 @@
+﻿@page
+@model VVSummerBlastFRONTEND.Pages.Admin.JegyekModel
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Jegyek és Rendelések";
+}
+
+<div class="mb-4">
+    <h2 style="font-weight: 900; letter-spacing: 1px;">Jegyek és Rendelések</h2>
+    <p class="text-secondary">Kövesd nyomon a fesztivál bevételeit és a jegyeladásokat.</p>
+</div>
+
+<!-- Statisztikai sáv -->
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <div class="admin-card border-start border-info border-5">
+            <h6 class="text-secondary text-uppercase fw-bold">Összes Bevétel</h6>
+            <h2 id="statRevenue" style="color: #00d2ff; font-weight: 900;">0 Ft</h2>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="admin-card border-start border-warning border-5">
+            <h6 class="text-secondary text-uppercase fw-bold">Eladott Jegyek</h6>
+            <h2 id="statTickets" style="color: #FFD700; font-weight: 900;">0 db</h2>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="admin-card border-start border-danger border-5">
+            <h6 class="text-secondary text-uppercase fw-bold">Tranzakciók</h6>
+            <h2 id="statOrders" style="color: #ff007f; font-weight: 900;">0 db</h2>
+        </div>
+    </div>
+</div>
+
+<div class="admin-card">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h5 class="fw-bold m-0">Utolsó tranzakciók</h5>
+        <input type="text" id="orderSearch" class="form-control bg-dark text-white border-secondary w-25" placeholder="Keresés ID alapján..." onkeyup="searchOrders()">
+    </div>
+    <table class="table table-dark table-hover align-middle mb-0">
+        <thead>
+            <tr style="color: #00d2ff;">
+                <th>ID</th>
+                <th>Dátum</th>
+                <th>Összeg</th>
+                <th>Státusz</th>
+                <th class="text-end">Műveletek</th>
+            </tr>
+        </thead>
+        <tbody id="ordersTableBody">
+            <tr><td colspan="5" class="text-center py-4">Adatok betöltése...</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Részletes rendelési nézet (Modal) -->
+<div class="modal fade" id="orderDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="background: #0d0d0d; border: 1px solid #00d2ff; border-radius: 15px;">
+            <div class="modal-header border-secondary p-4">
+                <div>
+                    <h5 class="modal-title fw-900 text-uppercase mb-0" id="modalOrderId" style="letter-spacing: 2px; color: #00d2ff;">RENDELÉS #...</h5>
+                    <small class="text-secondary fw-bold" id="modalDate">...</small>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            
+            <div class="modal-body p-4">
+                <div class="row g-3 mb-4">
+                    <div class="col-6 col-md-4">
+                        <div class="bg-dark p-3 rounded border border-secondary h-100">
+                            <small class="text-secondary d-block text-uppercase fw-bold mb-1" style="font-size: 0.65rem;">Tranzakció állapota</small>
+                            <span class="badge bg-success w-100 py-2" id="modalStatus" style="font-size: 0.75rem;">Fizetve</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="bg-dark p-3 rounded border border-info h-100 text-md-end">
+                            <small class="text-secondary d-block text-uppercase fw-bold mb-1" style="font-size: 0.65rem;">Teljes bevétel</small>
+                            <span class="text-info fs-4 fw-900" id="modalTotal" style="font-weight: 900;">0 Ft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kosár tartalmának kilistázása a rendelésen belül -->
+                <div class="table-responsive">
+                    <table class="table table-dark align-middle mb-0">
+                        <thead class="text-secondary">
+                            <tr style="font-size: 0.75rem; border-bottom: 2px solid #222;">
+                                <th class="ps-0 py-3">TERMÉK / TÉTEL</th>
+                                <th class="text-center py-3">MENNYISÉG</th>
+                                <th class="text-end pe-0 py-3">RÉSZÖSSZEG</th>
+                            </tr>
+                        </thead>
+                        <tbody id="modalItems" class="border-0"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer border-0 p-4 pt-0">
+                <button type="button" class="btn btn-outline-info fw-bold text-uppercase w-100 py-2" data-bs-dismiss="modal">Bezárás</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const apiBaseUrl = "https://localhost:7025";
+        let allOrders = [];
+
+        async function initDashboard() {
+            try {
+                // Statisztikák és a teljes rendeléslista betöltése párhuzamosan
+                const [statsRes, ordersRes] = await Promise.all([
+                    fetch(`${apiBaseUrl}/api/Rendelesek/stats`),
+                    fetch(`${apiBaseUrl}/api/Rendelesek`)
+                ]);
+                
+                const stats = await statsRes.json();
+                document.getElementById('statRevenue').innerText = stats.totalRevenue.toLocaleString() + " Ft";
+                document.getElementById('statTickets').innerText = stats.totalTickets + " db";
+                document.getElementById('statOrders').innerText = stats.ordersCount + " db";
+
+                allOrders = await ordersRes.json();
+                renderOrders(allOrders);
+            } catch (err) { console.error(err); }
+        }
+
+        function renderOrders(orders) {
+            const tbody = document.getElementById('ordersTableBody');
+            tbody.innerHTML = '';
+            orders.forEach(o => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td class="text-secondary">#${o.id}</td>
+                        <td>${o.datum}</td>
+                        <td class="fw-bold">${o.vegosszeg.toLocaleString()} Ft</td>
+                        <td><span class="badge bg-success">${o.statusz}</span></td>
+                        <td class="text-end">
+                            <button class="btn btn-sm btn-outline-info" onclick="showDetails(${o.id})">
+                                <i class="bi bi-eye"></i> Részletek
+                            </button>
+                        </td>
+                    </tr>`;
+            });
+        }
+
+        // Egy adott rendelés részleteinek (tételeknek) megjelenítése
+        function showDetails(orderId) {
+            const order = allOrders.find(o => o.id === orderId);
+            if (!order) return;
+
+            document.getElementById('modalOrderId').innerText = `RENDELÉS #${order.id}`;
+            document.getElementById('modalDate').innerText = order.datum;
+            document.getElementById('modalStatus').innerText = order.statusz;
+            document.getElementById('modalTotal').innerText = `${order.vegosszeg.toLocaleString()} Ft`;
+
+            const itemsBody = document.getElementById('modalItems');
+            itemsBody.innerHTML = '';
+
+            // Tételek kezelése, figyelembe véve a variánsokat (méret)
+            const tetelek = order.rendelesTetelek || order.RendelesTetelek || [];
+
+            if (tetelek.length > 0) {
+                tetelek.forEach(t => {
+                    let nev = t.termekNev || t.TermekNev || "Ismeretlen termék";
+                    const db = t.mennyiseg || t.Mennyiseg || 0;
+                    const ar = t.egysegar || t.Egysegar || 0;
+
+                    let meretSzoveg = "";
+                    // Méret információ kinyerése a beágyazott variáns objektumból
+                    const varians = t.varians || t.Varians;
+                    if (varians && varians.meret) {
+                        const mNev = varians.meret.megnevezes || varians.meret.Megnevezes;
+                        if (mNev && mNev !== "N/A") {
+                            meretSzoveg = `<br><small class="text-info">Méret: ${mNev}</small>`;
+                        }
+                    }
+
+                    itemsBody.innerHTML += `
+                        <tr style="border-bottom: 1px solid #333;">
+                            <td class="py-3">
+                                <span class="text-white fw-bold d-block">${nev}</span>
+                                ${meretSzoveg}
+                            </td>
+                            <td class="text-center py-3 text-secondary">${db} db</td>
+                            <td class="text-end py-3 text-info fw-bold">${(ar * db).toLocaleString()} Ft</td>
+                        </tr>`;
+                });
+            } else {
+                itemsBody.innerHTML = '<tr><td colspan="3" class="text-center py-4 text-secondary">Nincsenek tételek.</td></tr>';
+            }
+
+            new bootstrap.Modal(document.getElementById('orderDetailModal')).show();
+        }
+
+        function searchOrders() {
+            const term = document.getElementById('orderSearch').value.toLowerCase();
+            const filtered = allOrders.filter(o => o.id.toString().includes(term));
+            renderOrders(filtered);
+        }
+
+        document.addEventListener('DOMContentLoaded', initDashboard);
+    </script>
+}
