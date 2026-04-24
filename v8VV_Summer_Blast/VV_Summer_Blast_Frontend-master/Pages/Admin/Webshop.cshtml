@@ -1,0 +1,284 @@
+﻿@page
+@model VVSummerBlastFRONTEND.Pages.Admin.WebshopModel
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Webshop Kezelés";
+}
+
+<style>
+    /* Variánsok (méretek) megjelenítése a modalban */
+    .varians-sor {
+        background: rgba(255,255,255,0.05);
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    #colKep, #colAdatok {
+        transition: all 0.3s ease;
+    }
+</style>
+
+<div class="d-flex justify-content-between align-items-end mb-4">
+    <div>
+        <h2 style="font-weight: 900; letter-spacing: 1px;">Webshop Kezelése</h2>
+        <p class="text-secondary mb-0">Termékek és méretenkénti készletek kezelése.</p>
+    </div>
+    <div class="d-flex gap-3">
+        <!-- Azonnali szűrés gépeléskor -->
+        <input type="text" id="termekKereso" class="form-control bg-dark text-white border-secondary" placeholder="Keresés..." onkeyup="termekekBetoltese()">
+    </div>
+</div>
+
+<div class="admin-card">
+    <table class="table table-dark table-hover align-middle mb-0">
+        <thead>
+            <tr style="color: #00d2ff;">
+                <th>ID</th>
+                <th>Név</th>
+                <th>Kategória</th>
+                <th>Ár</th>
+                <th>Összkészlet</th>
+                <th class="text-end">Műveletek</th>
+            </tr>
+        </thead>
+        <tbody id="termekTableBody">
+            <tr><td colspan="6" class="text-center py-4">Töltés...</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Termék Szerkesztő Modal -->
+<div class="modal fade" id="termekModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="background: #0d0d0d; border: 1px solid #00d2ff; border-radius: 15px;">
+            <div class="modal-header border-secondary p-4">
+                <h5 class="modal-title fw-900 text-uppercase text-info" id="modalCim" style="letter-spacing: 2px;">Termék Szerkesztése</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form id="termekForm">
+                    <input type="hidden" id="editId">
+                    <input type="hidden" id="tKepUrl">
+
+                    <div class="row g-4">
+                        <!-- Bal oldal: Alapadatok -->
+                        <div class="col-md-7" id="colAdatok">
+                            <div class="mb-3">
+                                <label class="form-label text-secondary small fw-bold text-uppercase">Termék neve</label>
+                                <input type="text" id="tNev" class="form-control bg-dark text-white border-secondary py-2" required>
+                            </div>
+                            
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <label class="form-label text-secondary small fw-bold text-uppercase">Kategória</label>
+                                    <input type="text" id="tKategoria" class="form-control bg-dark text-white border-secondary py-2">
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label text-secondary small fw-bold text-uppercase">Ár (Ft)</label>
+                                    <input type="number" id="tAr" class="form-control bg-dark text-white border-secondary py-2" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Jobb oldal: Kép előnézet (dinamikusan elrejthető) -->
+                        <div class="col-md-5" id="colKep">
+                            <label class="form-label text-secondary small fw-bold text-uppercase d-block text-center">Termék fotó</label>
+                            <div class="product-preview-container bg-dark rounded border border-secondary d-flex align-items-center justify-content-center overflow-hidden" style="height: 220px;">
+                                <img id="tKepPreview" src="" alt="Termék" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                            </div>
+                        </div>
+
+                        <!-- Alsó szekció: Méretenkénti készlet (Variánsok) -->
+                        <div class="col-12 mt-2">
+                            <div class="p-3 rounded border border-info shadow-sm" style="background: rgba(0, 210, 255, 0.03);">
+                                <label class="form-label text-info fw-900 text-uppercase small mb-3" style="letter-spacing: 1px;">Készletkezelés (Méretek)</label>
+                                <div id="variansokKontener" class="row g-2">
+                                    <!-- Itt jelennek meg a méretek JS-ből -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 pt-3 border-top border-secondary text-end">
+                        <button type="button" class="btn btn-outline-secondary px-4 me-2" data-bs-dismiss="modal">Mégse</button>
+                        <button type="submit" class="btn btn-info fw-900 px-5 text-uppercase" style="letter-spacing: 1px;">Mentés</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const apiBaseUrl = "https://localhost:7025";
+        let aktualisVariansok = []; // A szerkesztés alatt álló termék variánsai
+
+        async function termekekBetoltese() {
+            try {
+                const res = await fetch(`${apiBaseUrl}/api/Termekek`);
+                if (!res.ok) throw new Error("Hiba a letöltéskor");
+                let data = await res.json();
+
+                // Kliens oldali keresés/szűrés
+                const kereso = document.getElementById('termekKereso').value.toLowerCase();
+                if(kereso) data = data.filter(t => t.nev.toLowerCase().includes(kereso));
+
+                const tbody = document.getElementById('termekTableBody');
+                tbody.innerHTML = data.map(t => {
+                    // Az összkészletet a variánsok (S, M, L stb.) készletének összege adja
+                    const osszKeszlet = t.variansok ? t.variansok.reduce((sum, v) => sum + v.keszlet, 0) : 0;
+                    return `
+                        <tr>
+                            <td class="text-secondary">#${t.id}</td>
+                            <td class="fw-bold">${t.nev}</td>
+                            <td><span class="badge bg-dark border border-info">${t.tipus || 'egyéb'}</span></td>
+                            <td>${t.ar.toLocaleString()} Ft</td>
+                            <td><span class="text-info fw-bold">${osszKeszlet} db</span></td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-outline-info me-1" onclick="szerkesztMode(${t.id})">
+                                    <i class="bi bi-pencil"></i> Szerkesztés
+                                </button>
+                            </td>
+                        </tr>`;
+                }).join('');
+            } catch (err) {
+                console.error("Betöltési hiba:", err);
+                document.getElementById('termekTableBody').innerHTML = '<tr><td colspan="6" class="text-center text-danger">Hiba az adatok lekérésekor.</td></tr>';
+            }
+        }
+
+        // Egy termék adatainak betöltése a modalba
+        async function szerkesztMode(id) {
+            try {
+                const res = await fetch(`${apiBaseUrl}/api/Termekek/${id}`);
+                if (!res.ok) throw new Error("Sikertelen lekérés");
+                const t = await res.json();
+                
+                document.getElementById('editId').value = t.id;
+                document.getElementById('tNev').value = t.nev;
+                document.getElementById('tAr').value = t.ar;
+                document.getElementById('tKategoria').value = t.tipus;
+                document.getElementById('tKepUrl').value = t.kepUrl;
+
+                // Modal elrendezés frissítése a kép alapján
+                updateModalLayout(t.kepUrl);
+
+                // Méretek (variánsok) listázása
+                renderVariansok(t.variansok || []);
+
+                const modalEl = document.getElementById('termekModal');
+                const bsModal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+                bsModal.show();
+
+            } catch (err) {
+                console.error("Hiba a szerkesztésnél:", err);
+                alert("Hiba történt a termék adatainak betöltésekor!");
+            }
+        }
+
+        // Ha nincs kép, a szöveges rész kitölti a teljes szélességet (col-md-12)
+        function updateModalLayout(kepUrl) {
+            const colAdatok = document.getElementById('colAdatok');
+            const colKep = document.getElementById('colKep');
+            const previewImg = document.getElementById('tKepPreview');
+
+            const hasValidImage = kepUrl && kepUrl.trim() !== "" && kepUrl !== "no-image.png";
+
+            if (hasValidImage) {
+                previewImg.src = `/Images/merch/${kepUrl}`;
+                colKep.classList.remove('d-none');
+                colAdatok.className = "col-md-7";
+            } else {
+                colKep.classList.add('d-none');
+                colAdatok.className = "col-md-12";
+            }
+        }
+
+        // Variánsok beviteli mezőinek generálása
+        function renderVariansok(variansok) {
+            aktualisVariansok = variansok;
+            const vKontener = document.getElementById('variansokKontener');
+            vKontener.innerHTML = '';
+
+            if (variansok.length === 0) {
+                vKontener.innerHTML = '<div class="col-12 text-center text-muted py-2 small">Nincsenek készlet információk.</div>';
+                return;
+            }
+
+            variansok.forEach((v, index) => {
+                // A 7-es ID-jú méret a "N/A" (például ha a terméknek nincs méretezése)
+                const isNA = Number(v.meretId) === 7;
+                const megnevezes = isNA ? "Raktáron:" : (v.meret?.megnevezes || "N/A");
+
+                vKontener.innerHTML += `
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="bg-dark p-2 rounded border border-secondary text-center h-100 d-flex flex-column justify-content-center">
+                            <small class="text-secondary d-block mb-1 fw-bold text-uppercase" style="font-size: 0.65rem;">${megnevezes}</small>
+                            <div class="input-group input-group-sm">
+                                <input type="number" class="form-control bg-black text-white border-secondary text-center"
+                                       value="${v.keszlet}" min="0"
+                                       onchange="variansKeszletUpdate(${index}, this.value)">
+                                <span class="input-group-text bg-dark border-secondary text-secondary">db</span>
+                            </div>
+                        </div>
+                    </div>`;
+            });
+        }
+
+        // Értékváltozás mentése a lokális tömbbe gépeléskor
+        function variansKeszletUpdate(index, value) {
+            const val = parseInt(value);
+            if (!isNaN(val) && val >= 0) {
+                aktualisVariansok[index].keszlet = val;
+            }
+        }
+
+        // Teljes termék mentése (PUT hívás)
+        document.getElementById('termekForm').onsubmit = async (e) => {
+            e.preventDefault();
+            const id = document.getElementById('editId').value;
+    
+            // Beküldendő variánsok megtisztítása (csak a szükséges mezők)
+            const tisztitottVariansok = aktualisVariansok.map(v => ({
+                id: v.id,
+                termekId: parseInt(id),
+                meretId: v.meretId,
+                keszlet: parseInt(v.keszlet)
+            }));
+
+            const data = {
+                id: parseInt(id),
+                nev: document.getElementById('tNev').value,
+                ar: parseFloat(document.getElementById('tAr').value),
+                tipus: document.getElementById('tKategoria').value,
+                kepUrl: document.getElementById('tKepUrl').value || "no-image.png",
+                variansok: tisztitottVariansok
+            };
+    
+            try {
+                const res = await fetch(`${apiBaseUrl}/api/Termekek/${id}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if(res.ok) {
+                    const modalEl = document.getElementById('termekModal');
+                    bootstrap.Modal.getInstance(modalEl).hide();
+                    termekekBetoltese();
+                } else {
+                    alert("Hiba történt a mentéskor!");
+                }
+            } catch (err) {
+                console.error("Hálózati hiba:", err);
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', termekekBetoltese);
+    </script>
+}

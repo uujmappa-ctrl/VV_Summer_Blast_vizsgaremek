@@ -1,0 +1,719 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\jegyek\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\jegyek\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\eloadok\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\eloadok\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\admin\\felhasznalok.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\admin\\felhasznalok.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\admin\\rendelesek.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\admin\\rendelesek.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\admin\\webshop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\admin\\webshop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\dtos\\termekvariansdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:dtos\\termekvariansdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\dtos\\termekdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:dtos\\termekdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\dtos\\meretdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:dtos\\meretdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\dtos\\kempingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:dtos\\kempingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\dtos\\esemenydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:dtos\\esemenydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\dtos\\hosteldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:dtos\\hosteldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\dtos\\eloadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:dtos\\eloadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\services\\termekapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:services\\termekapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\services\\szallasapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:services\\szallasapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\services\\esemenyapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:services\\esemenyapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\services\\eloadoapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:services\\eloadoapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\wwwroot\\images\\radio1.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:wwwroot\\images\\radio1.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\wwwroot\\images\\festival-bg.mp4||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:wwwroot\\images\\festival-bg.mp4||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\kosar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\kosar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\hostel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\hostel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\idorend\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\idorend\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\kemping\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\kemping\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\termekek\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\termekek\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\checkout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\checkout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\profil.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\profil.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\kosar\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\kosar\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\eloadok\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\eloadok\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\idorend\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\idorend\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hajek\\AppData\\Local\\Temp\\2a467a14-4c37-4361-b66a-6e04b5af2c63_04_16_VV_Summer_blast.zip.c63\\04_16_VV_Summer_blast\\VV_Summer_Blast-master\\Pages\\Eloadok\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\kemping\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\kemping\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\hostel\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\hostel\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\jegyek\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\jegyek\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hajek\\AppData\\Local\\Temp\\0c5af66d-ef4d-4bdc-9479-cbc709fb2652_VV_Summer_Blast-master (1).zip.652\\VV_Summer_Blast-master\\Pages\\Idorend\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\admin\\felhasznalok.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\admin\\felhasznalok.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|h:\\suli\\projekt\\05_05_vv_summer_blast\\05_05_vv_summer_blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\vv_summer_blast_frontend-master\\pages\\admin\\dashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E2DDA-5F8E-4B38-BAC7-C661C43EDC42}|VVSummerBlastFRONTEND.csproj|solutionrelative:pages\\admin\\dashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Rendelesek.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Rendelesek.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Rendelesek.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Rendelesek.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Rendelesek.cshtml",
+              "ViewState": "AgIAALkAAAAAAAAAAAAqwMsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T15:23:11.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EloadoDto.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\EloadoDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\EloadoDto.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\EloadoDto.cs",
+              "RelativeToolTip": "Dtos\\EloadoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T20:22:43.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAALEAAAAAAAAAAAAqwMIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-14T20:56:46.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TermekApi.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Services\\TermekApi.cs",
+              "RelativeDocumentMoniker": "Services\\TermekApi.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Services\\TermekApi.cs",
+              "RelativeToolTip": "Services\\TermekApi.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T20:59:29.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Dashboard.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T15:46:30.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Felhasznalok.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Felhasznalok.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Felhasznalok.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Felhasznalok.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Felhasznalok.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T19:07:01.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Index.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAQwLgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T20:25:06.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Eloadok\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Eloadok\\Index.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Eloadok\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Eloadok\\Index.cshtml",
+              "ViewState": "AgIAANcBAAAAAAAAAAAQwPUBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-13T22:17:51.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Jegyek\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Jegyek\\Index.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Jegyek\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Jegyek\\Index.cshtml",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAwF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-13T22:41:50.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Webshop.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Webshop.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Webshop.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Webshop.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Webshop.cshtml",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAAABUBAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T15:47:21.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MeretDto.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\MeretDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\MeretDto.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\MeretDto.cs",
+              "RelativeToolTip": "Dtos\\MeretDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T23:06:10.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HostelDto.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\HostelDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\HostelDto.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\HostelDto.cs",
+              "RelativeToolTip": "Dtos\\HostelDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:18:01.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "KempingDto.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\KempingDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\KempingDto.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\KempingDto.cs",
+              "RelativeToolTip": "Dtos\\KempingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:18:12.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TermekVariansDto.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\TermekVariansDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\TermekVariansDto.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\TermekVariansDto.cs",
+              "RelativeToolTip": "Dtos\\TermekVariansDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T23:06:42.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SzallasApi.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Services\\SzallasApi.cs",
+              "RelativeDocumentMoniker": "Services\\SzallasApi.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Services\\SzallasApi.cs",
+              "RelativeToolTip": "Services\\SzallasApi.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAmwDUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:19:26.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EsemenyApi.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Services\\EsemenyApi.cs",
+              "RelativeDocumentMoniker": "Services\\EsemenyApi.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Services\\EsemenyApi.cs",
+              "RelativeToolTip": "Services\\EsemenyApi.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwC8AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T17:04:52.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EsemenyDto.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\EsemenyDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\EsemenyDto.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\EsemenyDto.cs",
+              "RelativeToolTip": "Dtos\\EsemenyDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T20:22:57.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TermekDto.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\TermekDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\TermekDto.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Dtos\\TermekDto.cs",
+              "RelativeToolTip": "Dtos\\TermekDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T20:43:38.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EloadoApi.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Services\\EloadoApi.cs",
+              "RelativeDocumentMoniker": "Services\\EloadoApi.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Services\\EloadoApi.cs",
+              "RelativeToolTip": "Services\\EloadoApi.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowDEAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T20:14:00.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T19:38:38.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "festival-bg.mp4",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\wwwroot\\Images\\festival-bg.mp4",
+              "RelativeDocumentMoniker": "wwwroot\\Images\\festival-bg.mp4",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\wwwroot\\Images\\festival-bg.mp4",
+              "RelativeToolTip": "wwwroot\\Images\\festival-bg.mp4",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001836|",
+              "WhenOpened": "2026-05-05T22:41:27.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "radio1.png - PNG [400x385, 32 bit, PNG]",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\wwwroot\\Images\\radio1.png",
+              "RelativeDocumentMoniker": "wwwroot\\Images\\radio1.png",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\wwwroot\\Images\\radio1.png - PNG [400x385, 32 bit, PNG]",
+              "RelativeToolTip": "wwwroot\\Images\\radio1.png - PNG [400x385, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-05-05T22:41:31.321Z",
+              "EditorCaption": " - PNG [400x385, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Kosar\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Kosar\\Index.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Kosar\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Kosar\\Index.cshtml",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwDMAAACQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-19T19:46:36.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Hostel\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Hostel\\Index.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Hostel\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Hostel\\Index.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-15T18:23:16.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Idorend\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Idorend\\Index.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Idorend\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Idorend\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-13T22:36:01.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Kemping\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Kemping\\Index.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Kemping\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Kemping\\Index.cshtml",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAAALIAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-15T18:23:23.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Termekek\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Termekek\\Index.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Termekek\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Termekek\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwAgAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-13T22:49:26.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Checkout.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Checkout.cshtml",
+              "RelativeToolTip": "Pages\\Checkout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T20:17:58.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T00:08:41.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Login.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Login.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Login.cshtml",
+              "RelativeToolTip": "Pages\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T20:52:47.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Profil.cshtml",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Profil.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Profil.cshtml",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Profil.cshtml",
+              "RelativeToolTip": "Pages\\Profil.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-26T21:00:29.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Dashboard.cshtml.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Dashboard.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Dashboard.cshtml.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Dashboard.cshtml.cs",
+              "RelativeToolTip": "Pages\\Admin\\Dashboard.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T20:19:20.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Felhasznalok.cshtml.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Felhasznalok.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Felhasznalok.cshtml.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Admin\\Felhasznalok.cshtml.cs",
+              "RelativeToolTip": "Pages\\Admin\\Felhasznalok.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T20:19:12.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Checkout.cshtml.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Checkout.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Checkout.cshtml.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Checkout.cshtml.cs",
+              "RelativeToolTip": "Pages\\Checkout.cshtml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T20:18:06.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Profil.cshtml.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Profil.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Profil.cshtml.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Profil.cshtml.cs",
+              "RelativeToolTip": "Pages\\Profil.cshtml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T20:17:37.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Kosar\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Kosar\\Index.cshtml.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Kosar\\Index.cshtml.cs",
+              "RelativeToolTip": "Pages\\Kosar\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T19:47:02.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Eloadok\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Eloadok\\Index.cshtml.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Eloadok\\Index.cshtml.cs",
+              "RelativeToolTip": "Pages\\Eloadok\\Index.cshtml.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABUAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T22:17:59.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Idorend\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Idorend\\Index.cshtml.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Idorend\\Index.cshtml.cs",
+              "RelativeToolTip": "Pages\\Idorend\\Index.cshtml.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwBIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T17:18:41.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Hostel\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Hostel\\Index.cshtml.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Hostel\\Index.cshtml.cs",
+              "RelativeToolTip": "Pages\\Hostel\\Index.cshtml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:26:48.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hajek\\AppData\\Local\\Temp\\2a467a14-4c37-4361-b66a-6e04b5af2c63_04_16_VV_Summer_blast.zip.c63\\04_16_VV_Summer_blast\\VV_Summer_Blast-master\\Pages\\Eloadok\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hajek\\AppData\\Local\\Temp\\2a467a14-4c37-4361-b66a-6e04b5af2c63_04_16_VV_Summer_blast.zip.c63\\04_16_VV_Summer_blast\\VV_Summer_Blast-master\\Pages\\Eloadok\\Index.cshtml [Read Only]",
+              "ViewState": "AgIAAH8BAAAAAAAAAAAAwJgBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T15:56:49.291Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Kemping\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Kemping\\Index.cshtml.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Kemping\\Index.cshtml.cs",
+              "RelativeToolTip": "Pages\\Kemping\\Index.cshtml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:27:22.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Program.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:20:06.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hajek\\AppData\\Local\\Temp\\0c5af66d-ef4d-4bdc-9479-cbc709fb2652_VV_Summer_Blast-master (1).zip.652\\VV_Summer_Blast-master\\Pages\\Idorend\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hajek\\AppData\\Local\\Temp\\0c5af66d-ef4d-4bdc-9479-cbc709fb2652_VV_Summer_Blast-master (1).zip.652\\VV_Summer_Blast-master\\Pages\\Idorend\\Index.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-13T23:26:46.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Jegyek\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Jegyek\\Index.cshtml.cs",
+              "ToolTip": "H:\\suli\\projekt\\05_05_VV_Summer_Blast\\05_05_VV_Summer_Blast\\xddddd\\github verziok\\v8 - semi-final, no unittest, no bin, no obj\\projekt\\VV_Summer_Blast_Frontend-master\\Pages\\Jegyek\\Index.cshtml.cs",
+              "RelativeToolTip": "Pages\\Jegyek\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T20:33:35.661Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

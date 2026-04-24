@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Admin Panel</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Oldalsáv fixálva balra */
+        .admin-sidebar {
+            width: 280px;
+            background: #0a0a0a;
+            border-right: 1px solid rgba(0, 210, 255, 0.2);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+        }
+
+        .admin-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .admin-logo i { color: #FFD700; }
+        .admin-logo span { color: #00d2ff; }
+
+        .admin-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .admin-menu li { margin-bottom: 15px; }
+
+        .admin-menu a {
+            color: #aaa;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        /* Aktív menüpont és hover stílus */
+        .admin-menu a:hover, .admin-menu a.active {
+            background: rgba(0, 210, 255, 0.1);
+            color: #00d2ff;
+            transform: translateX(5px);
+        }
+
+        .logout-btn {
+            color: #ff007f !important;
+            margin-top: auto;
+            cursor: pointer;
+        }
+
+        .admin-content {
+            flex-grow: 1;
+            margin-left: 280px; 
+            padding: 40px;
+            background: #050505;
+        }
+
+        .admin-card {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+        }
+
+        /* Mobil nézet: csak ikonok maradnak, a szöveg eltűnik */
+        @@media (max-width: 992px) {
+            .admin-sidebar { width: 80px; padding: 20px 10px; }
+            .admin-sidebar div, .admin-sidebar span { display: none; }
+            .admin-content { margin-left: 80px; }
+            .admin-menu a { justify-content: center; padding: 15px; }
+            .admin-menu a i { font-size: 1.5rem; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="admin-sidebar">
+        <a href="/" class="admin-logo">
+            <i class="bi bi-lightning-charge-fill"></i>
+            <div>VV <span>ADMIN</span></div>
+        </a>
+
+        <ul class="admin-menu" id="admin-nav">
+            <li><a href="/Admin"><i class="bi bi-grid-1x2-fill"></i> <span>Fellépők</span></a></li>
+            <li><a href="/Admin/Felhasznalok"><i class="bi bi-people-fill"></i> <span>Felhasználók</span></a></li>
+            <li><a href="/Admin/Rendelesek"><i class="bi bi-cart-check-fill"></i> <span>Rendelések</span></a></li>
+            <li><a href="/Admin/Webshop"><i class="bi bi-bag-fill"></i> <span>Webshop</span></a></li>
+        </ul>
+
+        <a onclick="kilepes()" class="admin-menu logout-btn" style="padding: 12px 20px; text-decoration: none; display: flex; align-items: center; gap: 15px; font-weight: bold;">
+            <i class="bi bi-box-arrow-left"></i> <span>Kijelentkezés</span>
+        </a>
+    </nav>
+
+    <main class="admin-content">
+        @RenderBody()
+    </main>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Belépés ellenőrzése: Ha nincs user vagy nem admin, takarodjon az oldalról
+            const userJson = localStorage.getItem('user');
+            if (!userJson) {
+                window.location.href = "/Login";
+                return;
+            }
+
+            const user = JSON.parse(userJson);
+            if (user.role !== 'Admin') {
+                window.location.href = "/";
+                return;
+            }
+
+            // Aktív menüpont kijelölése az URL alapján
+            const currentPath = window.location.pathname.toLowerCase();
+            const navLinks = document.querySelectorAll('#admin-nav a');
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href').toLowerCase();
+                
+                // Ha pontos egyezés van, vagy aloldalon vagyunk (pl. /Admin/Webshop/Edit -> Webshop legyen aktív)
+                if (currentPath === href || (href !== "/admin" && currentPath.startsWith(href))) {
+                    link.classList.add('active');
+                } 
+                else if ((currentPath === "/admin" || currentPath === "/admin/index") && href === "/admin") {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        function kilepes() {
+            if(confirm("Tényleg ki akarsz lépni?")) {
+                localStorage.removeItem('user');
+                window.location.href = '/';
+            }
+        }
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
